@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FandF.Views.Page1"
+             Title="Game Start">
+    <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+        <Label FontSize="22">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Fungeons and Flagons" FontAttributes="Bold" FontSize="22"/>
+                        <Span Text=" "/>
+                        <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Image Source="https://cdn.vectorstock.com/i/composite/15,10/goblet-of-death-vector-981510.jpg" />
+        <ScrollView>
+            <StackLayout>
+                <Button Margin="0,10,0,0"
+                Text="Score" 
+                Clicked="OnButtonClicked"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"/>
+                <Button Margin="0,10,0,0"
+                Text="Character" 
+                Clicked="OnButtonClicked"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"/>
+                <Button Margin="0,10,0,0"
+                Text="Inventory" 
+                Clicked="OnButtonClicked"
+                        
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"/>
+                <Button Margin="0,10,0,0"
+                Text="Monsters" 
+                Clicked="OnButtonClicked"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"/>
+                <Button Margin="0,10,0,0"
+                Text="Items" 
+                Clicked="OnButtonClicked"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"/>
+                <Button Margin="0,10,0,0"
+                Text="Battle" 
+                Clicked="OnButtonClicked"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"/>
+            </StackLayout>
+        </ScrollView>
+        
+    </StackLayout>
+</ContentPage>
