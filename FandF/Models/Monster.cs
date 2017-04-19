@@ -28,6 +28,7 @@ namespace FandF
             this.Dex = Dex;
             this.MaxHealth = Health;
             this.CurrentHealth = this.MaxHealth;
+            this.level = 1;
             this.levelUp(level - 1);
             this.expValue = expValue;
         }

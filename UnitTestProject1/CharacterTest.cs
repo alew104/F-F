@@ -24,7 +24,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void GetItemStatsTest()
+        public void GetItemsStatsTest()
         {
             Character c = new Character("Taako Taco", "taako.png");
             Item i1 = new Item();
@@ -33,7 +33,7 @@ namespace UnitTestProject1
             i2.setStr(5);
             c.addItem(i1);
             c.addItem(i2);
-            Assert.Equals(10, c.getItemStr());
+            Assert.AreEqual(10, c.getItemStr());
         }
     }
 }

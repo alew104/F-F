@@ -14,5 +14,12 @@ namespace UnitTestProject1
             m.setCurrentHealth(0);
             Assert.IsFalse(m.isAlive());
         }
+
+        [TestMethod]
+        public void IsMonsterLevelingUpAtConstructionTest()
+        {
+            Monster m = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
+            Assert.AreEqual(10, m.getLevel());
+        }
     }
 }
