@@ -32,6 +32,11 @@ namespace FandF
             return Health;
         }
 
+        public void setStr(int Str)
+        {
+            this.Str = Str;
+        }
+
         string id = string.Empty;
 
 		[JsonIgnore]

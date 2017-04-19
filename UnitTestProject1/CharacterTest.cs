@@ -27,9 +27,13 @@ namespace UnitTestProject1
         public void GetItemStatsTest()
         {
             Character c = new Character("Taako Taco", "taako.png");
-            c.addItem(new Item("Umbral Staff", 0, 0, 10, 0));
-            c.addItem(new Item("Ring of Frost", 0, 0, 5, 0));
-            Assert.Equals(15, c.getItemDex());
+            Item i1 = new Item();
+            Item i2 = new Item();
+            i1.setStr(5);
+            i2.setStr(5);
+            c.addItem(i1);
+            c.addItem(i2);
+            Assert.Equals(10, c.getItemStr());
         }
     }
 }
