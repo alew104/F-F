@@ -8,7 +8,7 @@ namespace UnitTestProject1
     public class MonsterTest
     {
         [TestMethod]
-        public void IsMonsterAliveTest()
+        public void MonsterIsAliveTest()
         {
             Monster m = new Monster("Klaarg", "klaarg.png", 0 , 0, 0, 0, 0, 0);
             m.setCurrentHealth(0);
@@ -16,7 +16,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void IsMonsterLevelingUpAtConstructionTest()
+        public void MonsterIsLevelingUpAtConstructionTest()
         {
             Monster m = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
             Assert.AreEqual(10, m.getLevel());
