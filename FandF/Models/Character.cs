@@ -40,6 +40,8 @@ namespace FandF
             this.Dex = Dex;
             this.MaxHealth = Health;
             this.CurrentHealth = this.MaxHealth;
+            this.level = 1;
+            this.expPoints = 100;
         }
 
         /**** GETTERS ****/
@@ -237,6 +239,8 @@ namespace FandF
             setDex(rand.Next(1, 5)); //Dex between 1 and 4
             setDef(rand.Next(1, 5)); //Def between 1 and 4
             setMaxHealth(rand.Next(20, 41)); //Health between 20 and 40
+            setLevel(1);
+            setExpPoints(100);
         }
     }
 }
