@@ -55,7 +55,7 @@ namespace FandF
 
         public int getExpPoints()
         {
-            return this.level;
+            return this.expPoints;
         }
 
         public String getImage()
@@ -142,7 +142,6 @@ namespace FandF
         public void addItem(Item newThing)
         {
             items.Add(newThing);
-
         }
 
         //The following functions return the total item modifiers that are
