@@ -10,9 +10,9 @@ namespace UnitTestProject1
         [TestMethod]
         public void IsMonsterAliveTest()
         {
-            Character c = new Character("Merle Highchurch", "merle.png");
-            c.setCurrentHealth(0);
-            Assert.IsFalse(c.isAlive());
+            Monster m = new Monster("Klaarg", "klaarg.png");
+            m.setCurrentHealth(0);
+            Assert.IsFalse(m.isAlive());
         }
     }
 }
