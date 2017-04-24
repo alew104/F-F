@@ -162,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Helpers\DatabaseConnection_iOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Helpers\Settings.cs" />
   </ItemGroup>

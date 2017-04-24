@@ -1,63 +1,135 @@
-﻿using System;
-using SQLite;
-
-using Newtonsoft.Json;
-
+﻿using SQLite;
+using System.ComponentModel;
 namespace FandF
 {
-	public class Item : ObservableObject
-	{
-        private int Str;
-        private int Def;
-        private int Dex;
-        private int Health;
+    [Table("Item")]
+    public class Item : INotifyPropertyChanged
+    {
+        private int _id;
+        [PrimaryKey, AutoIncrement]
+        public int Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                this._id = value;
+                OnPropertyChanged(nameof(Id));
+            }
+        }
+
+        public string _text;
+        public string Text
+        {
+            get
+            {
+                return _text;
+            }
+            set
+            {
+                this._text = value;
+                OnPropertyChanged(nameof(Text));
+            }
+        }
+
+        public string _desc;
+        public string Desc
+        {
+            get
+            {
+                return _desc;
+            }
+            set
+            {
+                this._desc = value;
+                OnPropertyChanged(nameof(Desc));
+            }
+        }
+        private int _str;
+
+        public int Str
+        {
+            get
+            {
+                return _str;
+            }
+            set
+            {
+                this._str = value;
+                OnPropertyChanged(nameof(Str));
+            }
+        }
+
+        private int _def;
+        public int Def
+        {
+            get
+            {
+                return _def;
+            }
+            set
+            {
+                this._def = value;
+                OnPropertyChanged(nameof(Def));
+            }
+        }
+
+        private int _dex;
+        public int Dex
+        {
+            get
+            {
+                return _dex;
+            }
+            set
+            {
+                this._dex = value;
+                OnPropertyChanged(nameof(Dex));
+            }
+        }
+
+        private int _health;
+        public int Health
+        {
+            get
+            {
+                return _health;
+            }
+            set
+            {
+                this._health = value;
+                OnPropertyChanged(nameof(Health));
+            }
+        }
 
         public int getStr()
         {
-            return Str;
-        }
-
-        public int getDef()
-        {
-            return Def;
+            return _str;
         }
 
         public int getDex()
         {
-            return Dex;
+            return _dex;
+        }
+
+        public int getDef()
+        {
+            return _def;
         }
 
         public int getHealth()
         {
-            return Health;
+            return _health;
         }
 
-        public void setStr(int Str)
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string propertyName)
         {
-            this.Str = Str;
+            this.PropertyChanged?.Invoke(this,
+              new PropertyChangedEventArgs(propertyName));
         }
-
-        string id = string.Empty;
-
-		[JsonIgnore]
-		public string Id
-		{
-			get { return id; }
-			set { SetProperty(ref id, value); }
-		}
-
-		string text = string.Empty;
-		public string Text
-		{
-			get { return text; }
-			set { SetProperty(ref text, value); }
-		}
-
-		string description = string.Empty;
-		public string Description
-		{
-			get { return description; }
-			set { SetProperty(ref description, value); }
-		}
-	}
+    }
 }
