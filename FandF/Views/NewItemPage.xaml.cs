@@ -1,44 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using FandF.Services;
 
 using Xamarin.Forms;
 
 namespace FandF
 {
-    public partial class NewItemPage : ContentPage
-    {
-        public Item Item { get; set; }
-        DBItemController itemview;
+	public partial class NewItemPage : ContentPage
+	{
+		public Item Item { get; set; }
 
-        public NewItemPage()
-        {
-            InitializeComponent();
-            itemview = new DBItemController();
-            Title = "New Item";
-            Item = new Item
-            {
-                Text = "Item name",
-                Desc = "This is a nice description"
-            };
+		public NewItemPage()
+		{
+			InitializeComponent();
 
-            BindingContext = this;
-        }
+			Item = new Item
+			{
+				Text = "Item name",
+				Description = "This is a nice description"
+			};
 
-        public NewItemPage(Item item)
-        {
-            InitializeComponent();
-            itemview = new DBItemController();
-            Title = "Edit Item";
-            Item = item;
+			BindingContext = this;
+		}
 
-            BindingContext = this;
-        }
-
-        async void Save_Clicked(object sender, EventArgs e)
-        {
-            itemview.SaveItem(Item);
-            await Navigation.PopToRootAsync();
-        }
-    }
+		async void Save_Clicked(object sender, EventArgs e)
+		{
+			MessagingCenter.Send(this, "AddItem", Item);
+			await Navigation.PopToRootAsync();
+		}
+	}
 }
