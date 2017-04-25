@@ -6,11 +6,21 @@
         <ToolbarItem Text="Save" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <Label Text="Text" FontSize="Medium" />
-            <Entry Text="{Binding Item.Name}" FontSize="Small" />
-            <Label Text="Description" FontSize="Medium" />
-            <Editor Text="{Binding Item.Desc}" FontSize="Small" Margin="0" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="15">
+                <Label Text="Name" FontSize="Medium" />
+                <Entry Text="{Binding Item.Name}" FontSize="Small" />
+                <Label Text="Description" FontSize="Medium" />
+                <Editor Text="{Binding Item.Desc}" FontSize="Small" Margin="0" />
+                <Label Text="Strength" FontSize="Medium" />
+                <Editor Text="{Binding Item.Str}" FontSize="Small" />
+                <Label Text="Defense" FontSize="Medium" />
+                <Editor Text="{Binding Item.Def}" FontSize="Small" />
+                <Label Text="Dexterity" FontSize="Medium" />
+                <Editor Text="{Binding Item.Dex}" FontSize="Small" />
+                <Label Text="Health" FontSize="Medium" />
+                <Editor Text="{Binding Item.Health}" FontSize="Small" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
