@@ -1,61 +1,67 @@
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/FandF.Droid.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/FormsViewGroup.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Newtonsoft.Json.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Plugin.Connectivity.Abstractions.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Plugin.Connectivity.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Plugin.Settings.Abstractions.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Plugin.Settings.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Net.Http.Extensions.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Net.Http.Primitives.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Android.Support.Animated.Vector.Drawable.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Android.Support.Design.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Android.Support.v4.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Android.Support.v7.AppCompat.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Android.Support.v7.CardView.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Android.Support.v7.MediaRouter.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Android.Support.v7.RecyclerView.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Android.Support.Vector.Drawable.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Forms.Core.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Forms.Platform.Android.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Forms.Platform.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Xamarin.Forms.Xaml.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Java.Interop.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Mono.Android.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Core.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Net.Http.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Xml.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/mscorlib.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Runtime.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.ComponentModel.Composition.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.ComponentModel.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Xml.ReaderWriter.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Reflection.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Dynamic.Runtime.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.ObjectModel.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Linq.Expressions.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Text.Encoding.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.IO.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Globalization.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Collections.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Text.RegularExpressions.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Xml.XDocument.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Xml.Linq.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Runtime.Serialization.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.ServiceModel.Internals.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Threading.Tasks.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Runtime.Serialization.Primitives.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Runtime.Extensions.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Text.Encoding.Extensions.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Linq.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Reflection.Extensions.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Threading.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Diagnostics.Debug.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Diagnostics.Tools.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Microsoft.CSharp.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Mono.CSharp.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Resources.ResourceManager.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Runtime.InteropServices.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Net.Primitives.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/System.Collections.Concurrent.dll
-/Users/Alex/Projects/FandF/Droid/obj/Debug/android/assets/Mono.Security.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\FandF.Droid.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\FormsViewGroup.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Newtonsoft.Json.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Plugin.Connectivity.Abstractions.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Plugin.Connectivity.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Plugin.Settings.Abstractions.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Plugin.Settings.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\SQLite-net.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\SQLitePCLRaw.batteries_green.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\SQLitePCLRaw.batteries_v2.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\SQLitePCLRaw.core.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Net.Http.Extensions.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Net.Http.Primitives.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Design.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v4.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v7.AppCompat.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v7.CardView.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v7.MediaRouter.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Forms.Core.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Java.Interop.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Mono.Android.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Core.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.IO.Compression.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Net.Http.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Xml.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\mscorlib.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Runtime.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.ComponentModel.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Reflection.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Dynamic.Runtime.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.ObjectModel.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Linq.Expressions.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Text.Encoding.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.IO.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Globalization.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Collections.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Text.RegularExpressions.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Xml.XDocument.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Xml.Linq.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Threading.Tasks.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Runtime.Extensions.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Text.Encoding.Extensions.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Linq.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Reflection.Extensions.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Threading.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Diagnostics.Debug.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Diagnostics.Tools.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Microsoft.CSharp.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Mono.CSharp.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Resources.ResourceManager.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Runtime.InteropServices.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Net.Primitives.dll
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Collections.Concurrent.dll
