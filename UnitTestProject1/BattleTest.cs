@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FandF;
 
@@ -10,55 +11,55 @@ namespace UnitTestProject1
         [TestMethod]
         public void TakeTurnTest()
         {
-			List<Character> cl;
-			List<Monster> ml;
-			Character a = new Character("Magnus Burnsides", "magnus.png");
-			Character b = new Character("Merle Highchurch", "merle.png");
-			Monster m = new Monster("Klaarg", "klaarg.png", 0 , 0, 0, 0, 0, 0);
-			Monster n = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
-			cl.add(a);
-			cl.add(b);
-			ml.add(m);
-			ml.add(n);
-			Battle battle = new Battle(cl, ml);
-			battle.takeTurn();
-			Assert.isTrue(getCharAtIndex[0].getMaxHealth != getCharAtIndex[0].getCurrentHealth);
+            List<Character> cl = new List<Character>();
+            List<Monster> ml = new List<Monster>();
+            Character a = new Character("Magnus Burnsides", "magnus.png");
+            Character b = new Character("Merle Highchurch", "merle.png");
+            Monster m = new Monster("Klaarg", "klaarg.png", 0, 0, 0, 0, 0, 0);
+            Monster n = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
+            cl.Add(a);
+            cl.Add(b);
+            ml.Add(m);
+            ml.Add(n);
+            Battle battle = new Battle(cl, ml);
+            battle.takeTurn();
+            Assert.IsFalse(battle.getCharacterAtIndex(0).getMaxHealth() == battle.getCharacterAtIndex(0).getCurrentHealth());
         }
 
         [TestMethod]
         public void CharAttackTest()
         {
-            List<Character> cl;
-			List<Monster> ml;
-			Character a = new Character("Magnus Burnsides", "magnus.png");
-			Character b = new Character("Merle Highchurch", "merle.png");
-			Monster m = new Monster("Klaarg", "klaarg.png", 0 , 0, 0, 0, 0, 0);
-			Monster n = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
-			cl.add(a);
-			cl.add(b);
-			ml.add(m);
-			ml.add(n);
-			Battle battle = new Battle(cl, ml);
-			battle.charAttack(battle.getCharAtIndex[0], battle.getMonsterAtIndex[0]);
-			Assert.isTrue(battle.getMonsterAtIndex[0].getMaxHealth != getMonsterAtIndex[0].getCurrentHealth);
+            List<Character> cl = new List<Character>();
+            List<Monster> ml = new List<Monster>();
+            Character a = new Character("Magnus Burnsides", "magnus.png");
+            Character b = new Character("Merle Highchurch", "merle.png");
+            Monster m = new Monster("Klaarg", "klaarg.png", 0, 0, 0, 0, 0, 0);
+            Monster n = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
+            cl.Add(a);
+            cl.Add(b);
+            ml.Add(m);
+            ml.Add(n);
+            Battle battle = new Battle(cl, ml);
+            battle.charAttack(battle.getCharacterAtIndex(0), battle.getMonsterAtIndex(0));
+            Assert.IsTrue(battle.getMonsterAtIndex(0).getMaxHealth() != battle.getMonsterAtIndex(0).getCurrentHealth());
         }
 
         [TestMethod]
         public void MonsAttackTest()
         {
-            List<Character> cl;
-			List<Monster> ml;
-			Character a = new Character("Magnus Burnsides", "magnus.png");
-			Character b = new Character("Merle Highchurch", "merle.png");
-			Monster m = new Monster("Klaarg", "klaarg.png", 0 , 0, 0, 0, 0, 0);
-			Monster n = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
-			cl.add(a);
-			cl.add(b);
-			ml.add(m);
-			ml.add(n);
-			Battle battle = new Battle(cl, ml);
-			battle.monsAttack(battle.getMonsterAtIndex[0], battle.getCharacterAtIndex[0]);
-			Assert.isTrue(battle.getCharacterAtIndex[0].getMaxHealth != getCharacterAtIndex[0].getCurrentHealth);
+            List<Character> cl = new List<Character>();
+            List<Monster> ml = new List<Monster>();
+            Character a = new Character("Magnus Burnsides", "magnus.png");
+            Character b = new Character("Merle Highchurch", "merle.png");
+            Monster m = new Monster("Klaarg", "klaarg.png", 0, 0, 0, 0, 0, 0);
+            Monster n = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
+            cl.Add(a);
+            cl.Add(b);
+            ml.Add(m);
+            ml.Add(n);
+            Battle battle = new Battle(cl, ml);
+            battle.monsAttack(battle.getMonsterAtIndex(0), battle.getCharacterAtIndex(0));
+            Assert.IsTrue(battle.getCharacterAtIndex(0).getMaxHealth() != battle.getCharacterAtIndex(0).getCurrentHealth());
         }
 
         [TestMethod]

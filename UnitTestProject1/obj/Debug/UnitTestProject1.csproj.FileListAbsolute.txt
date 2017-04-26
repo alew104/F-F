@@ -40,6 +40,8 @@ C:\Users\Keegan\Desktop\Spring2017SU\MDPAs\MonsterFungeons\Fungeons and Flagons\
 C:\Users\Keegan\Desktop\Spring2017SU\MDPAs\MonsterFungeons\Fungeons and Flagons\UnitTestProject1\bin\Debug\FormsViewGroup.pdb
 C:\Users\Keegan\Desktop\Spring2017SU\MDPAs\MonsterFungeons\Fungeons and Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\Keegan\Desktop\Spring2017SU\MDPAs\MonsterFungeons\Fungeons and Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -80,5 +82,3 @@ E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\bin\Debug\F
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
-C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.dll
-C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

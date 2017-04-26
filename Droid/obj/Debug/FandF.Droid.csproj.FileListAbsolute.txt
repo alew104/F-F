@@ -75,6 +75,9 @@
 /Users/Alex/Projects/FandF/Droid/obj/Debug/res/values/styles.xml
 /Users/Alex/Projects/FandF/Droid/obj/Debug/R.cs.flag
 /Users/Alex/Projects/FandF/Droid/obj/Debug/uploadflags.txt
+C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\Droid\obj\Debug\FandF.Droid.csprojResolveAssemblyReference.cache
+C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\Droid\obj\Debug\FandF.Droid.dll
+C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\Droid\obj\Debug\FandF.Droid.pdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\FandF.Droid.dll
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\FandF.Droid.pdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\com.companyname.fandf.apk
@@ -106,6 +109,7 @@ E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Form
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Platform.dll
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Xaml.dll
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\FormsViewGroup.pdb
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\FormsViewGroup.dll.mdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\SQLite-net.xml
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\SQLite-net.dll.mdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.Net.Http.Extensions.xml
@@ -113,15 +117,20 @@ E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.Net.H
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Newtonsoft.Json.xml
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Plugin.Connectivity.Abstractions.pdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Plugin.Connectivity.Abstractions.xml
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Plugin.Connectivity.Abstractions.dll.mdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Plugin.Connectivity.pdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Plugin.Connectivity.xml
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Plugin.Connectivity.dll.mdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Plugin.Settings.Abstractions.xml
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Plugin.Settings.xml
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Core.pdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Core.xml
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Core.dll.mdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Platform.Android.pdb
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Xaml.pdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\FandF.Droid.Views.AboutPage.xaml.g.cs
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\FandF.Droid.App.xaml.g.cs
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\FandF.Droid.Views.InventoryPage.xaml.g.cs
@@ -156,53 +165,5 @@ E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\layout\t
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\values\styles.xml
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\R.cs.flag
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\uploadflags.txt
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\FandF.Droid.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\FormsViewGroup.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Plugin.Connectivity.Abstractions.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Plugin.Connectivity.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Core.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\FandF.Droid.csprojResolveAssemblyReference.cache
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Java.Interop.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Microsoft.CSharp.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Mono.Android.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Mono.CSharp.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\mscorlib.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.Core.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.IO.Compression.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.Net.Http.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.Runtime.Serialization.Primitives.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.Xml.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\System.Xml.Linq.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\FandF.Droid.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Mono.CSharp.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\mscorlib.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Plugin.Connectivity.Abstractions.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Plugin.Connectivity.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\SQLite-net.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Core.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.IO.Compression.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Xml.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\FandF.Droid.dll.mdb
-C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\Droid\obj\Debug\FandF.Droid.csprojResolveAssemblyReference.cache
-C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\Droid\obj\Debug\FandF.Droid.dll
-C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\Droid\obj\Debug\FandF.Droid.pdb
+E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\FandF.Droid.dll.mdb
