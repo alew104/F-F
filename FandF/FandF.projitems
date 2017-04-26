@@ -9,6 +9,7 @@
     <Import_RootNamespace>FandF</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\IDatabaseConnection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableRangeCollection.cs" />
@@ -67,5 +68,11 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MonsterPages\MonsterDetailPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MonsterPages\MonstersPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MonsterPages\NewMonsterPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

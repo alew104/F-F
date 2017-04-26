@@ -203,4 +203,6 @@ E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\asse
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\FandF.Droid.dll.mdb
-E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\FandF.Droid.dll.mdb
+C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\Droid\obj\Debug\FandF.Droid.csprojResolveAssemblyReference.cache
+C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\Droid\obj\Debug\FandF.Droid.dll
+C:\Users\Atlas\Documents\FandF\Fungeons%20and%20Flagons\Droid\obj\Debug\FandF.Droid.pdb
