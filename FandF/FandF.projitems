@@ -46,6 +46,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\MonsterPages\MonstersPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\MonsterPages\NewMonsterPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Page1.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LocalModels\Battle.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
