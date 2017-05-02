@@ -125,6 +125,7 @@ namespace FandF
         //Returns a sorted list of strings that dictate turn order in format "[fighterDex].[arrayDesignation].[posInArray]"
         private List<String> determineTurnOrder()
         {
+            List<String> turnOrder = new List<String>();
             foreach(Character myChar in characters)
             {
                 turnOrder.Add(myChar.getDex() + ".c." + characters.IndexOf(myChar));

@@ -15,13 +15,16 @@ namespace UnitTestProject1
             List<Monster> ml = new List<Monster>();
             Character a = new Character("Magnus Burnsides", "magnus.png");
             Character b = new Character("Merle Highchurch", "merle.png");
-            Monster m = new Monster("Klaarg", "klaarg.png", 0, 0, 0, 0, 0, 0);
-            Monster n = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
+            Monster m = new Monster("Klaarg", "klaarg.png", 10, 0, 0, 5, 0, 0);
+            Monster n = new Monster("Legion", "legion.png", 10, 0, 0, 5, 10, 500);
             cl.Add(a);
             cl.Add(b);
             ml.Add(m);
             ml.Add(n);
             Battle battle = new Battle(cl, ml);
+            battle.takeTurn();
+            battle.takeTurn();
+            battle.takeTurn();
             battle.takeTurn();
             Assert.IsFalse(battle.getCharacterAtIndex(0).getMaxHealth() == battle.getCharacterAtIndex(0).getCurrentHealth());
         }
@@ -33,8 +36,10 @@ namespace UnitTestProject1
             List<Monster> ml = new List<Monster>();
             Character a = new Character("Magnus Burnsides", "magnus.png");
             Character b = new Character("Merle Highchurch", "merle.png");
-            Monster m = new Monster("Klaarg", "klaarg.png", 0, 0, 0, 0, 0, 0);
-            Monster n = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
+            a.setDex(200);
+            a.setStr(200);
+            Monster m = new Monster("Klaarg", "klaarg.png", 0, 0, 1, 20, 0, 0);
+            Monster n = new Monster("Legion", "legion.png", 0, 0, 1, 20, 10, 500);
             cl.Add(a);
             cl.Add(b);
             ml.Add(m);
@@ -51,8 +56,8 @@ namespace UnitTestProject1
             List<Monster> ml = new List<Monster>();
             Character a = new Character("Magnus Burnsides", "magnus.png");
             Character b = new Character("Merle Highchurch", "merle.png");
-            Monster m = new Monster("Klaarg", "klaarg.png", 0, 0, 0, 0, 0, 0);
-            Monster n = new Monster("Legion", "legion.png", 0, 0, 0, 0, 10, 500);
+            Monster m = new Monster("Klaarg", "klaarg.png", 20, 20, 20, 20, 20, 20);
+            Monster n = new Monster("Legion", "legion.png", 20, 20, 20, 20, 10, 500);
             cl.Add(a);
             cl.Add(b);
             ml.Add(m);
