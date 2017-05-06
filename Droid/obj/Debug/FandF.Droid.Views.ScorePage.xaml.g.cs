@@ -11,7 +11,7 @@
 namespace FandF.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Users\\Alex Lew\\Source\\Repos\\Fungeons and Flagons\\FandF\\Views\\ScorePage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Alex Lew\\Source\\Repos\\Fungeons and Flagons\\FandF\\Views\\ScorePage.xaml")]
     public partial class ScorePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

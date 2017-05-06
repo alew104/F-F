@@ -72,5 +72,20 @@ namespace FandF.Services
                 }
             }
         }
+
+         // Takes an ID of a item and finds the item
+        // returns a item with ID -1 if there was an error
+        public ItemDBModel getItem(int id)
+        {
+            lock (collisionLock)
+            {
+                List<ItemDBModel> result = database.Query<ItemDBModel>("select * from ItemDBModel where ?", id);
+                if (result.Count == 0)
+                {
+                    return new ItemDBModel {Id = -1, Name = "Query Error"};
+                }
+                return result[0];
+            }
+        }
     }
 }

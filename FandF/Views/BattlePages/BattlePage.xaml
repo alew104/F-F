@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FandF.Views.BattlePage"
+             Title="Battle">
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Character 1" FontSize="Medium" />
+            <Label Text="{Binding C1.Name}" FontSize="Small" />
+            <Label Text="Character 2" FontSize="Medium" />
+            <Label Text="{Binding C2.Name}" FontSize="Small" />
+            <Label Text="Character 3" FontSize="Medium" />
+            <Label Text="{Binding C3.Name}" FontSize="Small" />
+            <Label Text="Character 4" FontSize="Medium" />
+            <Label Text="{Binding C4.Name}" FontSize="Small" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

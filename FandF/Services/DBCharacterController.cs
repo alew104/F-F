@@ -25,22 +25,29 @@ namespace FandF.Services
             this.Characters =
                 new ObservableCollection<CharacterDBModel>(database.Table<CharacterDBModel>());
 
+            // initialize db with initial characters
+
+
             // If the table is empty, initialize the collection
             if (!database.Table<CharacterDBModel>().Any())
             {
-                AddNewCharacter(new CharacterDBModel
-                {
-                    Name = "There are no characters",
-                    Image = "This is an image uri",
-                });
+                CharacterDBModel c1 = new CharacterDBModel { Name = "Thief", Def = 5, Dex = 20, Health = 25, Str = 10 };
+                CharacterDBModel c2 = new CharacterDBModel { Name = "Knight", Def = 20, Dex = 10, Health = 40, Str = 10 };
+                CharacterDBModel c3 = new CharacterDBModel { Name = "Archer", Def = 10, Dex = 15, Health = 25, Str = 15 };
+                CharacterDBModel c4 = new CharacterDBModel { Name = "Mage", Def = 5, Dex = 5, Health = 15, Str = 20 };
+
+                SaveCharacter(c1);
+                SaveCharacter(c2);
+                SaveCharacter(c3);
+                SaveCharacter(c4);
             }
         }
-
         public void AddNewCharacter(CharacterDBModel Character)
         {
             this.Characters.Add(Character);
         }
 
+        // Delete a character
         public int DeleteCharacter(CharacterDBModel Character)
         {
             var id = Character.Id;
@@ -55,7 +62,9 @@ namespace FandF.Services
             return id;
         }
 
-
+        // Update/Insert character
+        // if ID is null it is a new character
+        // if ID is not null then it is a character that needs to be updated
         public int SaveCharacter(CharacterDBModel Character)
         {
             lock (collisionLock)
@@ -72,5 +81,22 @@ namespace FandF.Services
                 }
             }
         }
+
+        // Takes an ID of a character and finds the character
+        // returns a character with ID -1 if there was an error
+        public CharacterDBModel getCharacter(int id)
+        {
+            lock (collisionLock)
+            {
+                List<CharacterDBModel> result = database.Query<CharacterDBModel>("select * from CharacterDBModel where id = ?", id);
+                if (result.Count == 0)
+                {
+                    return new CharacterDBModel {Id = -1, Name = "Query Error"};
+                }
+                return result[0];
+            }
+        }
+
+
     }
 }

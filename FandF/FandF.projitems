@@ -25,6 +25,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\DBMonsterController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BattleViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CharacterDetailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MonsterDetailViewModel.cs" />
@@ -34,7 +35,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\BattlePage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BattlePages\BattlePage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterPages\CharacterDetailPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterPages\CharacterPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterPages\NewCharacterPage.xaml.cs" />
@@ -52,7 +53,6 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\InventoryPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BattlePage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Page1.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ScorePage.cs" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ScorePage.xaml" />
@@ -73,5 +73,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BattlePages\BattlePage.xaml" />
   </ItemGroup>
 </Project>

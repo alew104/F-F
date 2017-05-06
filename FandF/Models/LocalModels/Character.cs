@@ -6,28 +6,28 @@ namespace FandF
     public class Character : ObservableObject
     {
         public int Id;
-        private String name;
-        private int level;
-        private int expPoints;
-        private String image;
-        private int Str;
-        private int Def;
-        private int Dex;
-        private int MaxHealth;
-        private int CurrentHealth;
-        private List<Item> items;
+        public String Name { get; set; }
+        public int Level { get; set; }
+        public int ExpPoints { get; set; }
+        public String Image { get; set; }
+        public int Str { get; set; }
+        public int Def { get; set; }
+        public int Dex { get; set; }
+        public int MaxHealth { get; set; }
+        public int CurrentHealth { get; set; }
+        public List<Item> items { get; set; }
 
         public Character()
         {
-            name = "default";
-            image = "default";
+            Name = "default";
+            Image = "default";
         }
         //Genereate a new character with random stats
         public Character(String name, String image)
         {
-            this.name = name;
+            this.Name = name;
             items = new List<Item>();
-            this.image = image;
+            this.Image = image;
             initRandomStats();
             this.CurrentHealth = this.MaxHealth;
         }
@@ -35,38 +35,38 @@ namespace FandF
         //Generate a new character with specified stats
         public Character(String name, String image, int Str, int Def, int Dex, int Health)
         {
-            this.name = name;
+            this.Name = name;
             items = new List<Item>();
-            this.image = image;
+            this.Image = image;
             this.Str = Str;
             this.Def = Def;
             this.Dex = Dex;
             this.MaxHealth = Health;
             this.CurrentHealth = this.MaxHealth;
-            this.level = 1;
-            this.expPoints = 100;
+            this.Level = 1;
+            this.ExpPoints = 100;
         }
 
         /**** GETTERS ****/
 
         public String getName()
         {
-            return this.name;
+            return this.Name;
         }
 
         public int getLevel()
         {
-            return this.level;
+            return this.Level;
         }
 
         public int getExpPoints()
         {
-            return this.expPoints;
+            return this.ExpPoints;
         }
 
         public String getImage()
         {
-            return this.image;
+            return this.Image;
         }
 
         public int getStr()
@@ -98,22 +98,22 @@ namespace FandF
 
         public void setName(String name)
         {
-            this.name = name;
+            this.Name = name;
         }
 
         public void setLevel(int level)
         {
-            this.level = level;
+            this.Level = level;
         }
 
         public void setExpPoints(int expPoints)
         {
-            this.expPoints = expPoints;
+            this.ExpPoints = expPoints;
         }
 
         public void setImage(String image)
         {
-            this.image = image;
+            this.Image = image;
         }
 
         public void setStr(int Str)
@@ -202,11 +202,11 @@ namespace FandF
         //new level (new level every 100 exp), level up
         public void gainExp(int exp)
         {
-            this.expPoints += exp;
-            int newLevel = (this.expPoints / 100);
-            if (newLevel > this.level)
+            this.ExpPoints += exp;
+            int newLevel = (this.ExpPoints / 100);
+            if (newLevel > this.Level)
             {
-                levelUp(newLevel - this.level);
+                levelUp(newLevel - this.Level);
             }
         }
 
@@ -229,7 +229,7 @@ namespace FandF
                 setMaxHealth(getMaxHealth() + rand.Next(1, 11));
             }
 
-            this.level += numLevels;
+            this.Level += numLevels;
         }
 
 

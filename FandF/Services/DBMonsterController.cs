@@ -72,5 +72,20 @@ namespace FandF.Services
                 }
             }
         }
+        
+        // Takes an ID of a character and finds the character
+        // returns a character with ID -1 if there was an error
+        public MonsterDBModel getMonster(int id)
+        {
+            lock (collisionLock)
+            {
+                List<MonsterDBModel> result = database.Query<MonsterDBModel>("select * from CharacterDBModel where ?", id);
+                if (result.Count == 0)
+                {
+                    return new MonsterDBModel {Id = -1, Name = "Query Error"};
+                }
+                return result[0];
+            }
+        }
     }
 }

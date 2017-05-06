@@ -11,7 +11,7 @@
 namespace FandF.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Users\\Alex Lew\\Source\\Repos\\Fungeons and Flagons\\FandF\\Views\\Page1.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Alex Lew\\Source\\Repos\\Fungeons and Flagons\\FandF\\Views\\Page1.xaml")]
     public partial class Page1 : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

@@ -5,7 +5,8 @@ namespace FandF
     [Table("CharacterDBModel")]
     public class CharacterDBModel : INotifyPropertyChanged
     {
-        private int _id;
+        public string ListName => string.Format("{0} {1}", Id, Name);
+        public int _id;
         [PrimaryKey, AutoIncrement]
         public int Id
         {
