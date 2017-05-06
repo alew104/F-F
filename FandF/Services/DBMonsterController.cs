@@ -28,11 +28,15 @@ namespace FandF.Services
             // If the table is empty, initialize the collection
             if (!database.Table<MonsterDBModel>().Any())
             {
-                AddNewMonster(new MonsterDBModel
-                {
-                    Name = "There are no monsters",
-                    Image = "This is an image uri",
-                });
+                MonsterDBModel c1 = new MonsterDBModel { Name = "Skeleton", Def = 5, Dex = 20, Health = 25, Str = 10 };
+                MonsterDBModel c2 = new MonsterDBModel { Name = "Skeleton King", Def = 20, Dex = 10, Health = 80, Str = 10 };
+                MonsterDBModel c3 = new MonsterDBModel { Name = "Troll", Def = 10, Dex = 15, Health = 50, Str = 15 };
+                MonsterDBModel c4 = new MonsterDBModel { Name = "Trogre", Def = 20, Dex = 5, Health = 15, Str = 20 };
+
+                SaveMonster(c1);
+                SaveMonster(c2);
+                SaveMonster(c3);
+                SaveMonster(c4);
             }
         }
 
@@ -79,7 +83,7 @@ namespace FandF.Services
         {
             lock (collisionLock)
             {
-                List<MonsterDBModel> result = database.Query<MonsterDBModel>("select * from CharacterDBModel where ?", id);
+                List<MonsterDBModel> result = database.Query<MonsterDBModel>("select * from MonsterDBModel where id = ?", id);
                 if (result.Count == 0)
                 {
                     return new MonsterDBModel {Id = -1, Name = "Query Error"};

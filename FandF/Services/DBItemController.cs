@@ -20,7 +20,6 @@ namespace FandF.Services
             database =
                 DependencyService.Get<IDatabaseConnection>().
                 DbConnection();
-            //database.CreateTable<Item>();
 
             this.Items =
                 new ObservableCollection<ItemDBModel>(database.Table<ItemDBModel>());
@@ -28,11 +27,15 @@ namespace FandF.Services
             // If the table is empty, initialize the collection
             if (!database.Table<ItemDBModel>().Any())
             {
-                AddNewItem(new ItemDBModel
-                {
-                    Name = "There are no items",
-                    Desc = "Please add an item"
-                });
+                ItemDBModel c1 = new ItemDBModel { Name = "Mjollnir", Desc = "Thor's very own hammer", Str = 10, Dex = 5 };
+                ItemDBModel c2 = new ItemDBModel { Name = "Excalibur", Desc = "An ancient holy sword", Def = 10, Str = 5 };
+                ItemDBModel c3 = new ItemDBModel { Name = "Muramasa", Desc  = "A cursed Japanese blade", Def = -10, Dex = 15, Health = -5, Str = 15 };
+                ItemDBModel c4 = new ItemDBModel { Name = "Odin's Shield",Desc = "The shield used to defend Asgard",  Def = 10, Health = 5};
+
+                SaveItem(c1);
+                SaveItem(c2);
+                SaveItem(c3);
+                SaveItem(c4);
             }
         }
 
@@ -79,7 +82,7 @@ namespace FandF.Services
         {
             lock (collisionLock)
             {
-                List<ItemDBModel> result = database.Query<ItemDBModel>("select * from ItemDBModel where ?", id);
+                List<ItemDBModel> result = database.Query<ItemDBModel>("select * from ItemDBModel where id = ?", id);
                 if (result.Count == 0)
                 {
                     return new ItemDBModel {Id = -1, Name = "Query Error"};

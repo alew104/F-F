@@ -5,6 +5,7 @@ namespace FandF
     [Table("ItemDBModel")]
     public class ItemDBModel : INotifyPropertyChanged
     {
+        public string ListName => string.Format("{0} {1}", Id, Name);
         private int _id;
         [PrimaryKey, AutoIncrement]
         public int Id
