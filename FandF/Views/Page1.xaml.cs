@@ -35,19 +35,11 @@ namespace FandF.Views
                 CharacterDBModel c2 = db.getCharacter(2);
                 CharacterDBModel c3 = db.getCharacter(3);
                 CharacterDBModel c4 = db.getCharacter(4);
-                Debug.WriteLine(c1.Name);
-                Debug.WriteLine(c2.Name);
-                Debug.WriteLine(c3.Name);
-                Debug.WriteLine(c4.Name);
 
                 Character ch1 = new Character(c1.Name, c1.Image, c1.Str, c1.Def, c1.Dex, c1.Health);
                 Character ch2 = new Character(c2.Name, c2.Image, c2.Str, c2.Def, c2.Dex, c2.Health);
                 Character ch3 = new Character(c3.Name, c3.Image, c3.Str, c3.Def, c3.Dex, c3.Health);
                 Character ch4 = new Character(c4.Name, c4.Image, c4.Str, c4.Def, c4.Dex, c4.Health);
-                Debug.WriteLine(ch1.Name);
-                Debug.WriteLine(ch2.Name);
-                Debug.WriteLine(ch3.Name);
-                Debug.WriteLine(ch4.Name);
 
 
                 await Navigation.PushAsync(new BattlePage(new BattleViewModel(ch1, ch2, ch3, ch4)));

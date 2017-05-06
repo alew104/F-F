@@ -8,15 +8,15 @@ namespace FandF
 {
     public class Monster : ObservableObject
     {
-        private String name;
-        private int level;
-        private int expValue;
-        private String image;
-        private int Str;
-        private int Def;
-        private int Dex;
-        private int MaxHealth;
-        private int CurrentHealth;
+        public String name { get; set; }
+        public int level { get; set; }
+        public int expValue { get; set; }
+        public String image { get; set; }
+        public int Str { get; set; }
+        public int Def { get; set; }
+        public int Dex { get; set; }
+        public int MaxHealth { get; set; }
+        public int CurrentHealth { get; set; }
 
         //Generate a new monster with specified base stats, level, and expValue
         public Monster(String name, String image, int Str, int Def, int Dex, int Health, int level, int expValue)

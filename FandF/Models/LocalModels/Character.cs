@@ -5,7 +5,6 @@ namespace FandF
 {
     public class Character : ObservableObject
     {
-        public int Id;
         public String Name { get; set; }
         public int Level { get; set; }
         public int ExpPoints { get; set; }

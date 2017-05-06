@@ -13,10 +13,19 @@ namespace FandF.Views
 	public partial class BattlePage : ContentPage
 	{   
         BattleViewModel vm;
+        Battle battle;
 		public BattlePage (BattleViewModel bm)
 		{
             InitializeComponent ();
             BindingContext = this.vm = bm;
-		}
+            List<Monster> mList = vm.getMonsters();
+            List<Character> cList = vm.getCharacters();
+
+            battle = new Battle(cList, mList);
+        }
+
+        // battle logic here
+
+
 	}
 }
