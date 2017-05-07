@@ -36,7 +36,10 @@ namespace FandF.Views
         //simulation that runs until all characters dead
         public void runSimulation()
         {
-            
+            while(battle.isPartyAlive())
+            {
+                battle.takeTurn();
+            }
         }
 
 	}

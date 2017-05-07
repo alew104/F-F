@@ -146,7 +146,7 @@ namespace FandF
         {
             foreach(Character character in this.characters)
             {
-                if(character.getCurrentHealth() > 0)
+                if(character.getCurrentHealth() > 0) //if at least one alive, return true
                 {
                     return true;
                 }
