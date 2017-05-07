@@ -40,6 +40,14 @@ namespace FandF
             return overallTurn;
         }
 
+        public List<Character> getParty()
+        {
+            //FIXME: need to deep copy all characters in party, then return new list.
+            //This may involve giving Character a clone method.
+            List<Character> temp = new List<Character>();
+            return temp;
+        }
+
         /**** SETTERS ****/
 
 
@@ -154,6 +162,7 @@ namespace FandF
             return false;
         }
 
+        //did party kill all monsters in this battle?
         public bool areMonstersAlive()
         {
             foreach(Monster monster in this.monsters)
