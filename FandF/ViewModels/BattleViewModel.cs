@@ -24,9 +24,12 @@ namespace FandF
 
         public Battle battle { get; set; }
 
+        
+        // the characters that are going to be in the battle
         public BattleViewModel(Character ch1, Character ch2, Character ch3, Character ch4)
         {
             Title = "Battle";
+            // specify these for binding
             C1 = ch1;
             C2 = ch2;
             C3 = ch3;
@@ -34,31 +37,43 @@ namespace FandF
 
         }
 
-
+        // returns the characters as a list
         public List<Character> getCharacters()
         {
             return new List<Character> { C1, C2, C3, C4 };
         }
 
+        // returns the monsters as a list
         public List<Monster> getMonsters()
         {
             return new List<Monster> { m1, m2, m3, m4 };
         }
 
+        // Generates new monsters for the characters to fight
+        // Run this before starting a new battle
         public List<Monster> generateNewMonsters()
         {
-            m1 = generateMonster(1, C1.Level);
-            m2 = generateMonster(2, C2.Level);
-            m3 = generateMonster(3, C3.Level);
-            m4 = generateMonster(4, C4.Level);
+            // setting them up for binds
+            m1 = generateMonster(C1.Level);
+            m2 = generateMonster(C2.Level);
+            m3 = generateMonster(C3.Level);
+            m4 = generateMonster(C4.Level);
             return new List<Monster> { m1, m2, m3, m4 };
         }
 
 
-        private Monster generateMonster(int id, int level)
+        private Monster generateMonster(int level)
         {
+            // initiate new db connection
             DBMonsterController db = new DBMonsterController();
+            // get number of entries
+            int max = db.getCount();
+            // rng an id to grab
+            Random rand = new Random();
+            int id = rand.Next(1, max);
+            //get that monster from the db
             MonsterDBModel m = db.getMonster(id);
+            // generate new monster
             return new Monster(m.Name, m.Image, m.Str, m.Def, m.Dex, m.Health, level, m.ExpValue);
         }
 

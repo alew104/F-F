@@ -40,11 +40,6 @@ namespace FandF.Services
             }
         }
 
-        public void AddNewMonster(MonsterDBModel Monster)
-        {
-            this.Monsters.Add(Monster);
-        }
-
         public int DeleteMonster(MonsterDBModel Monster)
         {
             var id = Monster.Id;
@@ -89,6 +84,16 @@ namespace FandF.Services
                     return new MonsterDBModel {Id = -1, Name = "Query Error"};
                 }
                 return result[0];
+            }
+        }
+
+        // returns number of entries in db 
+        public int getCount()
+        {
+            lock (collisionLock)
+            {
+                List<MonsterDBModel> result = database.Query<MonsterDBModel>("SELECT * FROM MonsterDBModel");
+                return result.Count;
             }
         }
     }

@@ -42,10 +42,6 @@ namespace FandF.Services
                 SaveCharacter(c4);
             }
         }
-        public void AddNewCharacter(CharacterDBModel Character)
-        {
-            this.Characters.Add(Character);
-        }
 
         // Delete a character
         public int DeleteCharacter(CharacterDBModel Character)
@@ -94,6 +90,16 @@ namespace FandF.Services
                     return new CharacterDBModel {Id = -1, Name = "Query Error"};
                 }
                 return result[0];
+            }
+        }
+
+        // returns number of entries in db 
+        public int getCount()
+        {
+            lock (collisionLock)
+            {
+                List<CharacterDBModel> result = database.Query<CharacterDBModel>("SELECT * FROM CharacterDBModel");
+                return result.Count;
             }
         }
 

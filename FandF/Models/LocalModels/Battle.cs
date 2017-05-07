@@ -11,7 +11,7 @@ namespace FandF
         private List<String> turnOrder; //Elements formatted "[fighterDex].[arrayDesignation].[posInArray]"
         private int roundTurn;
         private int overallTurn;
-        public string logLine { get; set; };
+        public string logLine { get; set; }
 
         //Currently takes characters and monsters as parameters
         public Battle(List<Character> characters, List<Monster> monsters)

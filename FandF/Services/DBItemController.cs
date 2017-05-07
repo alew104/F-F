@@ -39,11 +39,6 @@ namespace FandF.Services
             }
         }
 
-        public void AddNewItem(ItemDBModel item)
-        {
-            this.Items.Add(item);
-        }
-
         public int DeleteItem(ItemDBModel item)
         {
             var id = item.Id;
@@ -88,6 +83,16 @@ namespace FandF.Services
                     return new ItemDBModel {Id = -1, Name = "Query Error"};
                 }
                 return result[0];
+            }
+        }
+
+        // returns number of entries in db 
+        public int getCount()
+        {
+            lock (collisionLock)
+            {
+                List<ItemDBModel> result = database.Query<ItemDBModel>("SELECT * FROM ItemDBModel");
+                return result.Count;
             }
         }
     }
