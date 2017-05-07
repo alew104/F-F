@@ -140,5 +140,18 @@ namespace FandF
             turnOrder.Sort();
             return turnOrder;
         }
+
+        //Determine if party is dead
+        public bool isPartyAlive()
+        {
+            foreach(Character character in this.characters)
+            {
+                if(character.getCurrentHealth() > 0)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

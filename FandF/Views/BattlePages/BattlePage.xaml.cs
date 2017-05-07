@@ -33,6 +33,11 @@ namespace FandF.Views
         // i assume this is where we put the simulation portion
         // ie battle class runs until characters are at 0 hp
 
+        //simulation that runs until all characters dead
+        public void runSimulation()
+        {
+            
+        }
 
 	}
 }
