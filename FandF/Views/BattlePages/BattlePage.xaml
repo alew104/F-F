@@ -13,6 +13,16 @@
             <Label Text="{Binding C3.Name}" FontSize="Small" />
             <Label Text="Character 4" FontSize="Medium" />
             <Label Text="{Binding C4.Name}" FontSize="Small" />
+            <Button Margin="0,10,0,0"
+             Text="Attack" 
+             Clicked="Button_Clicked"
+             BackgroundColor="{StaticResource Primary}"
+             TextColor="White"/>
+            <Button Margin="0,10,0,0"
+             Text="Run To End"
+             Clicked="Button_Clicked"
+             BackgroundColor="{StaticResource Primary}"
+             TextColor="White"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

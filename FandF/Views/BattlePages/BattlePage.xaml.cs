@@ -28,10 +28,11 @@ namespace FandF.Views
             // battle class created
             battle = new Battle(cList, mList);
         }
-
+        //************************************************************
         // battle logic here
         // i assume this is where we put the simulation portion
         // ie battle class runs until characters are at 0 hp
+        //************************************************************
 
         //simulation that runs until all characters dead
         public void runSimulation()
@@ -40,7 +41,27 @@ namespace FandF.Views
             {
                 battle.takeTurn();
             }
+            //FIXME: output results to screen
         }
 
-	}
+        //For the turn by turn functionality
+        public void runTurn()
+        {
+            battle.takeTurn();
+            //FIXME: output results of turn to screen
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            if(button.Text == "Attack")
+            {
+                runTurn();
+            }
+            if(button.Text == "Run to End")
+            {
+                runSimulation();
+            }
+        }
+    }
 }
