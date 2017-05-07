@@ -153,5 +153,17 @@ namespace FandF
             }
             return false;
         }
+
+        public bool areMonstersAlive()
+        {
+            foreach(Monster monster in this.monsters)
+            {
+                if(monster.getCurrentHealth() > 0) //if at least one alive, return true
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
