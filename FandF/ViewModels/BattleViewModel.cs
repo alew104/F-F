@@ -61,18 +61,26 @@ namespace FandF
         {
             // setting them up for binds
             m1 = generateMonster(C1.Level);
+            OnPropertyChanged("m1");
             m2 = generateMonster(C2.Level);
+            OnPropertyChanged("m2");
             m3 = generateMonster(C3.Level);
+            OnPropertyChanged("m3");
             m4 = generateMonster(C4.Level);
+            OnPropertyChanged("m4");
             return new List<Monster> { m1, m2, m3, m4 };
         }
 
         public void setCharacters(List<Character> c)
         {
             C1 = c[0];
+            OnPropertyChanged("C1");
             C2 = c[1];
+            OnPropertyChanged("C2");
             C3 = c[2];
+            OnPropertyChanged("C3");
             C4 = c[3];
+            OnPropertyChanged("C4");
         }
 
 
@@ -89,6 +97,15 @@ namespace FandF
             MonsterDBModel m = db.getMonster(id);
             // generate new monster
             return new Monster(m.Name, m.Image, m.Str, m.Def, m.Dex, m.Health, level, m.ExpValue);
+        }
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this,
+                    new PropertyChangedEventArgs(propertyName));
+            }
         }
 
     }
