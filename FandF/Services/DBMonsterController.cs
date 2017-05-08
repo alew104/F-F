@@ -96,5 +96,10 @@ namespace FandF.Services
                 return result.Count;
             }
         }
+
+        public List<MonsterDBModel> getAllMonsters()
+        {
+            return database.Query<MonsterDBModel>("SELECT * FROM ItemDBModel");
+        }
     }
 }

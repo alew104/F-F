@@ -103,6 +103,11 @@ namespace FandF.Services
             }
         }
 
+        public List<CharacterDBModel> getAllCharacters()
+        {
+            return database.Query<CharacterDBModel>("SELECT * FROM CharacterDBModel");
+        }
+
 
     }
 }
