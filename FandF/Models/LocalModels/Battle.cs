@@ -92,8 +92,15 @@ namespace FandF
             //if attack is a hit
             if(dodgeCalc > diceRoll){
                 int damageCalc = (myChar.Str + myChar.getItemStr()) - myMons.Def;
+                if (damageCalc < 0)
+                    damageCalc = 0;
+
                 //myMons.setCurrentHealth(myMons.getCurrentHealth()-damageCalc);
-                myMons.CurrentHealth = myMons.CurrentHealth - damageCalc;
+                int monsHealth = myMons.CurrentHealth - damageCalc;
+                if (monsHealth < 0)
+                    monsHealth = 0;
+
+                myMons.CurrentHealth = monsHealth;
                 //if monster dies, character gains expvalue
                 if(myMons.CurrentHealth <= 0){
                     myChar.gainExp(myMons.expValue);
@@ -114,16 +121,24 @@ namespace FandF
 			if (dodgeCalc > diceRoll)
 			{
                 int damageCalc = myMons.Str - (myChar.Def + myChar.getItemDef());
-                myChar.CurrentHealth = (myChar.CurrentHealth - damageCalc);
+                if (damageCalc < 0)
+                    damageCalc = 0;
+
+                int charHealth = myChar.CurrentHealth - damageCalc;
+                if (charHealth < 0)
+                    charHealth = 0;
+
+                myChar.CurrentHealth = charHealth;
 			}
         }
 
         private Monster getMonsterWithLeastHealth()
         {
-            Monster weakest = monsters[0];
+            //Max health monster so all other monsters are weaker
+            Monster weakest = new Monster("", "", -1, -1, -1, Int32.MaxValue, 1, -1);
             foreach(Monster myMons in monsters)
             {
-                if(myMons.CurrentHealth < weakest.CurrentHealth)
+                if(myMons.CurrentHealth < weakest.CurrentHealth && myMons.isAlive())
                 {
                     weakest = myMons;
                 }
@@ -147,6 +162,7 @@ namespace FandF
 
             //The default sort will sort the fighters by dexterities and prioritize characters over monsters
             turnOrder.Sort();
+            turnOrder.Reverse();
             return turnOrder;
         }
 
