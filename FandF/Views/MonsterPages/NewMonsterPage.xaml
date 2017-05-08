@@ -20,6 +20,8 @@
                 <Editor Text="{Binding Monster.Dex}" FontSize="Small" />
                 <Label Text="Health" FontSize="Medium" />
                 <Editor Text="{Binding Monster.Health}" FontSize="Small" />
+                <Label Text="ExpValue" FontSize="Medium" />
+                <Editor Text="{Binding Monster.ExpValue}" FontSize="Small" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

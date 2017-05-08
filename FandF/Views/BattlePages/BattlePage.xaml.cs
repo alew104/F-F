@@ -75,9 +75,8 @@ namespace FandF.Views
             {
                 if (!battle.areMonstersAlive())
                 {
-                    vm.generateNewMonsters();
                     List<Character> c = battle.endOfBattle();
-                    vm.setCharacters(c);
+                    newBattle(c);
                     //FIXME: need to make a new instance of a battle
                     //with new monsters, but the same characters...
 
@@ -101,6 +100,11 @@ namespace FandF.Views
             {
                 runSimulation();
             }
+        }
+
+        async void newBattle(List<Character> c)
+        {   
+            await Navigation.PushAsync(new BattlePage(new BattleViewModel(c[0], c[1], c[2], c[3])));
         }
     }
 }

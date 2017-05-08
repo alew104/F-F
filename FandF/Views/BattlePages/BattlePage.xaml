@@ -27,35 +27,46 @@
              TextColor="White"/>
         </StackLayout>
         -->
+            <ScrollView>
+                <StackLayout>
+                    <Grid ColumnSpacing="20" RowSpacing="5" Padding="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Characters" Grid.Row="0" Grid.Column="0" FontSize="Large" HorizontalTextAlignment="Center" />
+                    <Label Text="Monsters" Grid.Row="0" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding C1.Name}" Grid.Row="1" Grid.Column="0" FontSize="Medium"/>
+                    <Label Text="{Binding m1.Name}" Grid.Row="1" Grid.Column="1" FontSize="Medium"/>
+                    <Label Text="{Binding C1.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="2" Grid.Column="0" FontSize="Micro"/>
+                    <Label Text="{Binding m1.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="2" Grid.Column="1" FontSize="Micro"/>    
+                    <Label Text="{Binding C2.Name}" Grid.Row="3" Grid.Column="0" FontSize="Medium"/>
+                    <Label Text="{Binding m2.Name}" Grid.Row="3" Grid.Column="1" FontSize="Medium"/>
+                    <Label Text="{Binding C2.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="4" Grid.Column="0" FontSize="Micro"/>
+                    <Label Text="{Binding m2.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="4" Grid.Column="1" FontSize="Micro"/>    
+                    <Label Text="{Binding C3.Name}" Grid.Row="5" Grid.Column="0" FontSize="Medium"/>
+                    <Label Text="{Binding m3.Name}" Grid.Row="5" Grid.Column="1" FontSize="Medium"/>
+                    <Label Text="{Binding C3.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="6" Grid.Column="0" FontSize="Micro"/>
+                    <Label Text="{Binding m3.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="6" Grid.Column="1" FontSize="Micro"/>    
+                    <Label Text="{Binding C4.Name}" Grid.Row="7" Grid.Column="0" FontSize="Medium"/>
+                    <Label Text="{Binding m4.Name}" Grid.Row="7" Grid.Column="1" FontSize="Medium"/>
+                    <Label Text="{Binding C4.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="8" Grid.Column="0" FontSize="Micro"/>
+                    <Label Text="{Binding m4.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="8" Grid.Column="1" FontSize="Micro"/>    
+                </Grid>
 
-        <Grid ColumnSpacing="20" RowSpacing="5" Padding="15">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Label Text="Characters" Grid.Row="0" Grid.Column="0" FontSize="Large" HorizontalTextAlignment="Center" />
-            <Label Text="Monsters" Grid.Row="0" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center"/>
-            <Label Text="{Binding C1.Name}" Grid.Row="1" Grid.Column="0" FontSize="Medium"/>
-            <Label Text="{Binding m1.Name}" Grid.Row="1" Grid.Column="1" FontSize="Medium"/>
-            <Label Text="{Binding C1.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="2" Grid.Column="0" FontSize="Small"/>
-            <Label Text="{Binding m1.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="2" Grid.Column="1" FontSize="Small"/>    
-            <Label Text="{Binding C2.Name}" Grid.Row="3" Grid.Column="0" FontSize="Medium"/>
-            <Label Text="{Binding m2.Name}" Grid.Row="3" Grid.Column="1" FontSize="Medium"/>
-            <Label Text="{Binding C2.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="4" Grid.Column="0" FontSize="Small"/>
-            <Label Text="{Binding m2.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="4" Grid.Column="1" FontSize="Small"/>    
-            <Label Text="{Binding C3.Name}" Grid.Row="5" Grid.Column="0" FontSize="Medium"/>
-            <Label Text="{Binding m3.Name}" Grid.Row="5" Grid.Column="1" FontSize="Medium"/>
-            <Label Text="{Binding C3.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="6" Grid.Column="0" FontSize="Small"/>
-            <Label Text="{Binding m3.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="6" Grid.Column="1" FontSize="Small"/>    
-            <Label Text="{Binding C4.Name}" Grid.Row="7" Grid.Column="0" FontSize="Medium"/>
-            <Label Text="{Binding m4.Name}" Grid.Row="7" Grid.Column="1" FontSize="Medium"/>
-            <Label Text="{Binding C4.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="8" Grid.Column="0" FontSize="Small"/>
-            <Label Text="{Binding m4.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="8" Grid.Column="1" FontSize="Small"/>    
-        </Grid>
+                    <Label Text="{Binding C1.Level, StringFormat='Current Level: {0}'}"  FontSize="Micro"/>
+                    <Label Text="{Binding C1.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
+                    <Label Text="{Binding C1.MaxHealth, StringFormat='Current MaxHealth: {0}'}" FontSize="Micro"/>
+                    <Label Text="{Binding C1.Dex, StringFormat='Current Dex: {0}'}" FontSize="Micro"/>
+                    <Label Text="{Binding C1.ExpPoints, StringFormat='Current EXP: {0}'}" FontSize="Micro"/>
+                    <Label Text="{Binding C1.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
+                </StackLayout>
+                
+        </ScrollView>
         <!--
         <StackLayout Spacing="20" Padding="15">
         -->

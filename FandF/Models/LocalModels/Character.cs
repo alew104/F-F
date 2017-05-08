@@ -161,7 +161,7 @@ namespace FandF
             this.MaxHealth = Health;
             this.CurrentHealth = this.MaxHealth;
             this.Level = 1;
-            this.ExpPoints = 100;
+            this.ExpPoints = 0;
         }
 
         /**** GETTERS ****/

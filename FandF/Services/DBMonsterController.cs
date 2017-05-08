@@ -28,10 +28,10 @@ namespace FandF.Services
             // If the table is empty, initialize the collection
             if (!database.Table<MonsterDBModel>().Any())
             {
-                MonsterDBModel c1 = new MonsterDBModel { Name = "Skeleton", Def = 5, Dex = 20, Health = 25, Str = 10 };
-                MonsterDBModel c2 = new MonsterDBModel { Name = "Skeleton King", Def = 20, Dex = 10, Health = 80, Str = 10 };
-                MonsterDBModel c3 = new MonsterDBModel { Name = "Troll", Def = 10, Dex = 15, Health = 50, Str = 15 };
-                MonsterDBModel c4 = new MonsterDBModel { Name = "Trogre", Def = 20, Dex = 5, Health = 15, Str = 20 };
+                MonsterDBModel c1 = new MonsterDBModel { Name = "Skeleton", Def = 5, Dex = 20, Health = 25, Str = 10, ExpValue = 15 };
+                MonsterDBModel c2 = new MonsterDBModel { Name = "Skeleton King", Def = 20, Dex = 10, Health = 80, Str = 10, ExpValue = 80 };
+                MonsterDBModel c3 = new MonsterDBModel { Name = "Troll", Def = 10, Dex = 15, Health = 50, Str = 15, ExpValue = 10 };
+                MonsterDBModel c4 = new MonsterDBModel { Name = "Trogre", Def = 20, Dex = 5, Health = 15, Str = 20, ExpValue = 30 };
 
                 SaveMonster(c1);
                 SaveMonster(c2);

@@ -10,7 +10,7 @@ using FandF.Services;
 
 namespace FandF
 {
-    public class BattleViewModel : BaseViewModel
+    public class BattleViewModel : INotifyPropertyChanged
     {
         public Character C1 { get; set; }
         public Character C2 { get; set; }
@@ -25,8 +25,10 @@ namespace FandF
         public Battle battle { get; set; }
 
         public string output { get; set; }
+        public string Title { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        
+
         // the characters that are going to be in the battle
         public BattleViewModel(Character ch1, Character ch2, Character ch3, Character ch4)
         {
