@@ -35,6 +35,8 @@ namespace FandF
             C3 = ch3;
             C4 = ch4;
 
+            generateNewMonsters();
+
         }
 
         // returns the characters as a list

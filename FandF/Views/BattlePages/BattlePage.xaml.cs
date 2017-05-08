@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,15 +18,20 @@ namespace FandF.Views
 		{
             InitializeComponent ();
             // set binding context to objects/fields in the viewmodel
-            BindingContext = this.vm = bm;
+            BindingContext = this.vm = bm; 
+
             // generates initial set of monsters 
-            vm.generateNewMonsters();
+            //vm.generateNewMonsters(); now this is in battle view model
             // lists for the battle class to be created
             List<Monster> mList = vm.getMonsters();
             List<Character> cList = vm.getCharacters();
 
+            //used these to check if monsters were created in the view model and put into the list
+            //Debug.WriteLine(String.Format("Hello {0} {1}", vm.C1.Name, vm.m1.Name));
+            //Debug.WriteLine(String.Format("Hello {0} {1}", cList[0].Name, mList[0].Name));
+			
             // battle class created
-            battle = new Battle(cList, mList);
+			battle = new Battle(cList, mList);
         }
 
         // battle logic here
@@ -67,7 +72,7 @@ namespace FandF.Views
         public void runTurn()
         {
             
-            if(battle.areMonstersAlive())
+            if(!battle.areMonstersAlive())
             {
                 //FIXME: need to make a new instance of a battle
                 //with new monsters, but the same characters...

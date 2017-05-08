@@ -8,32 +8,149 @@ namespace FandF
 {
     public class Monster : ObservableObject
     {
-        public String name { get; set; }
-        public int level { get; set; }
-        public int expValue { get; set; }
-        public String image { get; set; }
-        public int Str { get; set; }
-        public int Def { get; set; }
-        public int Dex { get; set; }
-        public int MaxHealth { get; set; }
-        public int CurrentHealth { get; set; }
+        private string _name;
+        public string Name
+		{
+			get
+			{
+				return _name;
+			}
+			set
+			{
+				this._name = value;
+				OnPropertyChanged(nameof(Name));
+			}
+		}
+
+		private int _level;
+		public int Level
+		{
+			get
+			{
+				return _level;
+			}
+			set
+			{
+				this._level = value;
+				OnPropertyChanged(nameof(Level));
+			}
+		}
+
+		private int _expValue;
+		public int expValue
+		{
+			get
+			{
+                return _expValue;
+			}
+			set
+			{
+                this._expValue= value;
+                OnPropertyChanged(nameof(expValue));
+			}
+		}
+
+		private string _image;
+		public string Image
+		{
+			get
+			{
+				return _image;
+			}
+			set
+			{
+				this._image = value;
+				OnPropertyChanged(nameof(Image));
+			}
+		}
+
+		private int _Str;
+		public int Str
+		{
+			get
+			{
+				return _Str;
+			}
+			set
+			{
+				this._Str = value;
+				OnPropertyChanged(nameof(Str));
+			}
+		}
+
+        private int _Def;
+        public int Def
+		{
+			get
+			{
+                return _Def;
+			}
+			set
+			{
+				this._Def = value;
+				OnPropertyChanged(nameof(Def));
+			}
+		}
+
+		private int _Dex;
+		public int Dex
+		{
+			get
+			{
+				return _Dex;
+			}
+			set
+			{
+				this._Dex = value;
+				OnPropertyChanged(nameof(Dex));
+			}
+		}
+
+		private int _maxHealth;
+		public int MaxHealth
+		{
+			get
+			{
+				return _maxHealth;
+			}
+			set
+			{
+				this._maxHealth = value;
+				OnPropertyChanged(nameof(MaxHealth));
+			}
+		}
+
+		private int _currentHealth;
+		public int CurrentHealth
+		{
+			get
+			{
+				return _currentHealth;
+			}
+			set
+			{
+				this._currentHealth = value;
+				OnPropertyChanged(nameof(CurrentHealth));
+			}
+		}
 
         //Generate a new monster with specified base stats, level, and expValue
         public Monster(String name, String image, int Str, int Def, int Dex, int Health, int level, int expValue)
         {
-            this.name = name;
-            this.image = image;
+            this.Name = name;
+            this.Image = image;
             this.Str = Str;
             this.Def = Def;
             this.Dex = Dex;
             this.MaxHealth = Health;
             this.CurrentHealth = this.MaxHealth;
-            this.level = 1;
+            this.Level = 1;
             this.levelUp(level - 1);
             this.expValue = expValue;
         }
 
         /**** GETTERS ****/
+        /**
 
         public String getName()
         {
@@ -81,6 +198,7 @@ namespace FandF
         }
 
         /**** SETTERS ****/
+        /**
 
         public void setName(String name)
         {
@@ -144,17 +262,22 @@ namespace FandF
 
             for (int i = 0; i < numLevels; i++)
             {
-                setStr(getStr() + rand.Next(1, 5));
-                setDex(getDex() + rand.Next(1, 5));
-                setDef(getDef() + rand.Next(1, 5));
+                //setStr(getStr() + rand.Next(1, 5));
+                //setDex(getDex() + rand.Next(1, 5));
+                //setDef(getDef() + rand.Next(1, 5));
+                Str = this.Str + rand.Next(1, 5);
+                Dex = this.Dex + rand.Next(1, 5);
+                Def = this.Def + rand.Next(1, 5);
+
             }
 
             for (int i = 0; i < numLevels; i++)
             {
-                setMaxHealth(getMaxHealth() + rand.Next(1, 11));
+                //setMaxHealth(getMaxHealth() + rand.Next(1, 11));
+                MaxHealth = this.MaxHealth + rand.Next(1, 11);
             }
 
-            this.level += numLevels;
+            this.Level += numLevels;
         }
     }
 }

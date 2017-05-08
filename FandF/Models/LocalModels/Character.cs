@@ -5,16 +5,134 @@ namespace FandF
 {
     public class Character : ObservableObject
     {
-        public String Name { get; set; }
-        public int Level { get; set; }
-        public int ExpPoints { get; set; }
-        public String Image { get; set; }
-        public int Str { get; set; }
-        public int Def { get; set; }
-        public int Dex { get; set; }
-        public int MaxHealth { get; set; }
-        public int CurrentHealth { get; set; }
+        
         public List<Item> items { get; set; }
+
+		private string _name;
+		public string Name
+		{
+			get
+			{
+				return _name;
+			}
+			set
+			{
+				this._name = value;
+				OnPropertyChanged(nameof(Name));
+			}
+		}
+
+		private int _level;
+		public int Level
+		{
+			get
+			{
+				return _level;
+			}
+			set
+			{
+				this._level = value;
+				OnPropertyChanged(nameof(Level));
+			}
+		}
+
+		private int _expPoints;
+		public int ExpPoints
+		{
+			get
+			{
+                return _expPoints;
+			}
+			set
+			{
+				this._expPoints = value;
+                OnPropertyChanged(nameof(ExpPoints));
+			}
+		}
+
+		private string _image;
+		public string Image
+		{
+			get
+			{
+				return _image;
+			}
+			set
+			{
+				this._image = value;
+				OnPropertyChanged(nameof(Image));
+			}
+		}
+
+		private int _Str;
+		public int Str
+		{
+			get
+			{
+				return _Str;
+			}
+			set
+			{
+				this._Str = value;
+				OnPropertyChanged(nameof(Str));
+			}
+		}
+
+		private int _Def;
+		public int Def
+		{
+			get
+			{
+				return _Def;
+			}
+			set
+			{
+				this._Def = value;
+				OnPropertyChanged(nameof(Def));
+			}
+		}
+
+		private int _Dex;
+		public int Dex
+		{
+			get
+			{
+				return _Dex;
+			}
+			set
+			{
+				this._Dex = value;
+				OnPropertyChanged(nameof(Dex));
+			}
+		}
+
+		private int _maxHealth;
+		public int MaxHealth
+		{
+			get
+			{
+				return _maxHealth;
+			}
+			set
+			{
+				this._maxHealth = value;
+				OnPropertyChanged(nameof(MaxHealth));
+			}
+		}
+
+		private int _currentHealth;
+		public int CurrentHealth
+		{
+			get
+			{
+				return _currentHealth;
+			}
+			set
+			{
+				this._currentHealth = value;
+				OnPropertyChanged(nameof(CurrentHealth));
+			}
+		}
 
         public Character()
         {
@@ -47,7 +165,7 @@ namespace FandF
         }
 
         /**** GETTERS ****/
-
+        /**
         public String getName()
         {
             return this.Name;
@@ -94,7 +212,7 @@ namespace FandF
         }
 
         /**** SETTERS ****/
-
+        /**
         public void setName(String name)
         {
             this.Name = name;
@@ -207,6 +325,7 @@ namespace FandF
             {
                 levelUp(newLevel - this.Level);
             }
+
         }
 
         //Adds 1d4 to each skill stat per level
@@ -218,14 +337,18 @@ namespace FandF
 
             for (int i = 0; i < numLevels; i++)
             {
-                setStr(getStr() + rand.Next(1, 5));
-                setDex(getDex() + rand.Next(1, 5));
-                setDef(getDef() + rand.Next(1, 5));
+                //setStr(getStr() + rand.Next(1, 5));
+               // setDex(getDex() + rand.Next(1, 5));
+                //setDef(getDef() + rand.Next(1, 5));
+                Str = this.Str + rand.Next(1, 5);
+                Dex = this.Dex + rand.Next(1, 5);
+                Def = this.Def + rand.Next(1, 5);
             }
 
             for (int i = 0; i < numLevels; i++)
             {
-                setMaxHealth(getMaxHealth() + rand.Next(1, 11));
+                //setMaxHealth(getMaxHealth() + rand.Next(1, 11));
+                MaxHealth = MaxHealth + rand.Next(1, 11);
             }
 
             this.Level += numLevels;
@@ -237,12 +360,18 @@ namespace FandF
         private void initRandomStats()
         {
             Random rand = new Random();
-            setStr(rand.Next(1, 5)); //Str between 1 and 4
-            setDex(rand.Next(1, 5)); //Dex between 1 and 4
-            setDef(rand.Next(1, 5)); //Def between 1 and 4
-            setMaxHealth(rand.Next(20, 41)); //Health between 20 and 40
-            setLevel(1);
-            setExpPoints(100);
+            //setStr(rand.Next(1, 5)); //Str between 1 and 4
+            //setDex(rand.Next(1, 5)); //Dex between 1 and 4
+            //setDef(rand.Next(1, 5)); //Def between 1 and 4
+            //setMaxHealth(rand.Next(20, 41)); //Health between 20 and 40
+            //setLevel(1);
+            //setExpPoints(100);
+            Str = rand.Next(1, 5);
+            Dex = rand.Next(1, 5);
+            Def = rand.Next(1, 5);
+            MaxHealth = rand.Next(20, 41);
+            Level = 1;
+            ExpPoints = 100;
         }
     }
 }

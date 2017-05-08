@@ -4,6 +4,8 @@
              x:Class="FandF.Views.BattlePage"
              Title="Battle">
     <ScrollView>
+    <StackLayout Spacing="20" Padding="15">
+        <!--
         <StackLayout Spacing="20" Padding="15">
             <Label Text="Character 1" FontSize="Medium" />
             <Label Text="{Binding C1.Name}" FontSize="Small" />
@@ -24,5 +26,51 @@
              BackgroundColor="{StaticResource Primary}"
              TextColor="White"/>
         </StackLayout>
+        -->
+
+        <Grid ColumnSpacing="20" RowSpacing="5" Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Characters" Grid.Row="0" Grid.Column="0" FontSize="Large" HorizontalTextAlignment="Center" />
+            <Label Text="Monsters" Grid.Row="0" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding C1.Name}" Grid.Row="1" Grid.Column="0" FontSize="Medium"/>
+            <Label Text="{Binding m1.Name}" Grid.Row="1" Grid.Column="1" FontSize="Medium"/>
+            <Label Text="{Binding C1.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="2" Grid.Column="0" FontSize="Small"/>
+            <Label Text="{Binding m1.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="2" Grid.Column="1" FontSize="Small"/>    
+            <Label Text="{Binding C2.Name}" Grid.Row="3" Grid.Column="0" FontSize="Medium"/>
+            <Label Text="{Binding m2.Name}" Grid.Row="3" Grid.Column="1" FontSize="Medium"/>
+            <Label Text="{Binding C2.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="4" Grid.Column="0" FontSize="Small"/>
+            <Label Text="{Binding m2.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="4" Grid.Column="1" FontSize="Small"/>    
+            <Label Text="{Binding C3.Name}" Grid.Row="5" Grid.Column="0" FontSize="Medium"/>
+            <Label Text="{Binding m3.Name}" Grid.Row="5" Grid.Column="1" FontSize="Medium"/>
+            <Label Text="{Binding C3.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="6" Grid.Column="0" FontSize="Small"/>
+            <Label Text="{Binding m3.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="6" Grid.Column="1" FontSize="Small"/>    
+            <Label Text="{Binding C4.Name}" Grid.Row="7" Grid.Column="0" FontSize="Medium"/>
+            <Label Text="{Binding m4.Name}" Grid.Row="7" Grid.Column="1" FontSize="Medium"/>
+            <Label Text="{Binding C4.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="8" Grid.Column="0" FontSize="Small"/>
+            <Label Text="{Binding m4.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="8" Grid.Column="1" FontSize="Small"/>    
+        </Grid>
+        <!--
+        <StackLayout Spacing="20" Padding="15">
+        -->
+            <Button Margin="0,10,0,0"
+             Text="Attack" 
+             Clicked="Button_Clicked"
+             BackgroundColor="{StaticResource Primary}"
+             TextColor="White"/>
+            <Button Margin="0,10,0,0"
+             Text="Run To End"
+             Clicked="Button_Clicked"
+             BackgroundColor="{StaticResource Primary}"
+             TextColor="White"/>
+        <!--</StackLayout>-->
+
+    </StackLayout>
     </ScrollView>
 </ContentPage>

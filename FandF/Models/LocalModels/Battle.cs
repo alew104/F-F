@@ -87,15 +87,16 @@ namespace FandF
             int diceRoll = rand.Next(1, 21);
 
             //see if monster dodges
-            int dodgeCalc = (myChar.getDex() + myChar.getItemDex()) - myMons.getDex();
+            int dodgeCalc = (myChar.Dex + myChar.getItemDex()) - myMons.Dex;
 
             //if attack is a hit
             if(dodgeCalc > diceRoll){
-                int damageCalc = (myChar.getStr() + myChar.getItemStr()) - myMons.getDef();
-                myMons.setCurrentHealth(myMons.getCurrentHealth()-damageCalc);
+                int damageCalc = (myChar.Str + myChar.getItemStr()) - myMons.Def;
+                //myMons.setCurrentHealth(myMons.getCurrentHealth()-damageCalc);
+                myMons.CurrentHealth = myMons.CurrentHealth - damageCalc;
                 //if monster dies, character gains expvalue
-                if(myMons.getCurrentHealth() <= 0){
-                    myChar.gainExp(myMons.getExpValue());
+                if(myMons.CurrentHealth <= 0){
+                    myChar.gainExp(myMons.expValue);
                 }
             }
 
@@ -107,13 +108,13 @@ namespace FandF
             int diceRoll = rand.Next(1, 21);
 
             //see if character dodges
-            int dodgeCalc = myMons.getDex() - (myChar.getDex() + myChar.getItemDex());
+            int dodgeCalc = myMons.Dex - (myChar.Dex + myChar.getItemDex());
 
 			//if attack is a hit
 			if (dodgeCalc > diceRoll)
 			{
-                int damageCalc = myMons.getStr() - (myChar.getDef() + myChar.getItemDef());
-                myChar.setCurrentHealth(myChar.getCurrentHealth() - damageCalc);
+                int damageCalc = myMons.Str - (myChar.Def + myChar.getItemDef());
+                myChar.CurrentHealth = (myChar.CurrentHealth - damageCalc);
 			}
         }
 
@@ -122,7 +123,7 @@ namespace FandF
             Monster weakest = monsters[0];
             foreach(Monster myMons in monsters)
             {
-                if(myMons.getCurrentHealth() < weakest.getCurrentHealth())
+                if(myMons.CurrentHealth < weakest.CurrentHealth)
                 {
                     weakest = myMons;
                 }
@@ -137,11 +138,11 @@ namespace FandF
             List<String> turnOrder = new List<String>();
             foreach(Character myChar in characters)
             {
-                turnOrder.Add(myChar.getDex() + ".c." + characters.IndexOf(myChar));
+                turnOrder.Add(myChar.Dex + ".c." + characters.IndexOf(myChar));
             }
             foreach(Monster myMons in monsters)
             {
-                turnOrder.Add(myMons.getDex() + ".m." + monsters.IndexOf(myMons));
+                turnOrder.Add(myMons.Dex + ".m." + monsters.IndexOf(myMons));
             }
 
             //The default sort will sort the fighters by dexterities and prioritize characters over monsters
@@ -154,7 +155,7 @@ namespace FandF
         {
             foreach(Character character in this.characters)
             {
-                if(character.getCurrentHealth() > 0) //if at least one alive, return true
+                if(character.CurrentHealth > 0) //if at least one alive, return true
                 {
                     return true;
                 }
@@ -167,7 +168,7 @@ namespace FandF
         {
             foreach(Monster monster in this.monsters)
             {
-                if(monster.getCurrentHealth() > 0) //if at least one alive, return true
+                if(monster.CurrentHealth > 0) //if at least one alive, return true
                 {
                     return true;
                 }

@@ -1,9 +1,9 @@
-# Version: 10.10.0.0 (d15-2: fe490c24)
+# Version: 10.10.0.30 (d15-2: 30b6e87e)
 # [first argument, ignore] # --cache
-/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.0/lib/mtouch/mtouch.exe \
-	/Users/Alex/Projects/FandF/iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.30/lib/mtouch/mtouch.exe \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/iOS/obj/iPhoneSimulator/Debug/mtouch-cache" \
 	--sim \
-	/Users/Alex/Projects/FandF/iOS/bin/iPhoneSimulator/Debug/FandF.iOS.app \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/iOS/bin/iPhoneSimulator/Debug/FandF.iOS.app" \
 	--executable \
 	FandF.iOS \
 	--fastdev \
@@ -19,40 +19,52 @@
 	--http-message-handler=HttpClientHandler \
 	"--abi=i386,x86_64" \
 	--symbollist \
-	/Users/Alex/Projects/FandF/iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list" \
 	--dsym=no \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Newtonsoft.Json.6.0.4/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Newtonsoft.Json.6.0.4/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xam.Plugin.Connectivity.2.2.12/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xam.Plugin.Connectivity.2.2.12/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xam.Plugin.Connectivity.2.2.12/lib/Xamarin.iOS10/Plugin.Connectivity.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xam.Plugin.Connectivity.2.2.12/lib/Xamarin.iOS10/Plugin.Connectivity.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xam.Plugins.Settings.2.5.1.0/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xam.Plugins.Settings.2.5.1.0/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xam.Plugins.Settings.2.5.1.0/lib/Xamarin.iOS10/Plugin.Settings.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xam.Plugins.Settings.2.5.1.0/lib/Xamarin.iOS10/Plugin.Settings.dll" \
+	-r \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/sqlite-net-pcl.1.3.1/lib/netstandard1.1/SQLite-net.dll" \
+	-r \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/SQLitePCLRaw.bundle_green.1.1.2/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll" \
+	-r \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/SQLitePCLRaw.bundle_green.1.1.2/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll" \
+	-r \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/SQLitePCLRaw.core.1.1.2/lib/Xamarin.iOS10/SQLitePCLRaw.core.dll" \
+	-r \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.2/lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll" \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.IO.Compression.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Net.Http.dll \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Microsoft.Net.Http.2.2.29/lib/Xamarin.iOS10/System.Net.Http.Extensions.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Microsoft.Net.Http.2.2.29/lib/Xamarin.iOS10/System.Net.Http.Extensions.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Microsoft.Net.Http.2.2.29/lib/Xamarin.iOS10/System.Net.Http.Primitives.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Microsoft.Net.Http.2.2.29/lib/Xamarin.iOS10/System.Net.Http.Primitives.dll" \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll" \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
 	-r \
@@ -322,95 +334,105 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Newtonsoft.Json.6.0.4/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Newtonsoft.Json.6.0.4/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xam.Plugin.Connectivity.2.2.12/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xam.Plugin.Connectivity.2.2.12/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xam.Plugin.Connectivity.2.2.12/lib/Xamarin.iOS10/Plugin.Connectivity.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xam.Plugin.Connectivity.2.2.12/lib/Xamarin.iOS10/Plugin.Connectivity.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xam.Plugins.Settings.2.5.1.0/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xam.Plugins.Settings.2.5.1.0/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xam.Plugins.Settings.2.5.1.0/lib/Xamarin.iOS10/Plugin.Settings.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xam.Plugins.Settings.2.5.1.0/lib/Xamarin.iOS10/Plugin.Settings.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Microsoft.Net.Http.2.2.29/lib/Xamarin.iOS10/System.Net.Http.Extensions.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/sqlite-net-pcl.1.3.1/lib/netstandard1.1/SQLite-net.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Microsoft.Net.Http.2.2.29/lib/Xamarin.iOS10/System.Net.Http.Primitives.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/SQLitePCLRaw.bundle_green.1.1.2/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/SQLitePCLRaw.bundle_green.1.1.2/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/SQLitePCLRaw.core.1.1.2/lib/Xamarin.iOS10/SQLitePCLRaw.core.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.2/lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Microsoft.Net.Http.2.2.29/lib/Xamarin.iOS10/System.Net.Http.Extensions.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Microsoft.Net.Http.2.2.29/lib/Xamarin.iOS10/System.Net.Http.Primitives.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/ca/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/cs/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/da/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/de/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/el/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/es/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/ca/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/fi/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/cs/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/fr/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/da/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/he/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/de/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/hi/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/el/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/hr/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/es/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/hu/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/fi/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/id/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/fr/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/it/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/he/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/ja/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/hi/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/ko/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/hr/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/ms/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/hu/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/nb/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/id/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/nl/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/it/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/ja/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/ko/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/ms/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/ro/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/nb/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/ru/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/nl/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/sk/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/sv/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/th/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/tr/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/ro/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/uk/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/ru/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/vi/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/sk/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/sv/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/th/Xamarin.Forms.Platform.iOS.resources.dll" \
 	-r \
-	/Users/Alex/Projects/FandF/packages/Xamarin.Forms.2.3.4.224/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/tr/Xamarin.Forms.Platform.iOS.resources.dll" \
+	-r \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/uk/Xamarin.Forms.Platform.iOS.resources.dll" \
+	-r \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/vi/Xamarin.Forms.Platform.iOS.resources.dll" \
+	-r \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll" \
+	-r \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll" \
+	-r \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll" \
 	--target-framework \
 	"Xamarin.iOS,v1.0" \
-	/Users/Alex/Projects/FandF/iOS/bin/iPhoneSimulator/Debug/FandF.iOS.exe \
+	"/Users/Jeff/Documents/CPSC 4910/Fungeons and Flagons/iOS/bin/iPhoneSimulator/Debug/FandF.iOS.exe" \
