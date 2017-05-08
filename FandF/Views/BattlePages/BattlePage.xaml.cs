@@ -71,15 +71,17 @@ namespace FandF.Views
         //For the turn by turn functionality
         public void runTurn()
         {
-            
-            if(!battle.areMonstersAlive())
+            if (battle.isPartyAlive())
             {
-                //FIXME: need to make a new instance of a battle
-                //with new monsters, but the same characters...
+                if (!battle.areMonstersAlive())
+                {
+                    //FIXME: need to make a new instance of a battle
+                    //with new monsters, but the same characters...
 
+                }
+                battle.takeTurn();
+                //FIXME: output results of turn to screen
             }
-            battle.takeTurn();
-            //FIXME: output results of turn to screen
         }
 
         //SEE BATTLEPAGE.XAML FOR BUTTONS I ADDED
@@ -90,7 +92,7 @@ namespace FandF.Views
             {
                 runTurn();
             }
-            if(button.Text == "Run to End")
+            if(button.Text == "Run To End")
             {
                 runSimulation();
             }

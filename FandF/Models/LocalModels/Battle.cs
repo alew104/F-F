@@ -75,7 +75,15 @@ namespace FandF
                     Random rand = new Random();
 
                     overallTurn++;
-                    monsAttack(currentMonster, characters[rand.Next(characters.Count)]);
+
+                    //Find living character to attack
+                    Character charToAttack = characters[rand.Next(characters.Count)];
+                    while (!charToAttack.isAlive())
+                    {
+                        charToAttack = characters[rand.Next(characters.Count)];
+                    }
+
+                    monsAttack(currentMonster, charToAttack);
                 }
             }
             roundTurn = (roundTurn + 1) % (characters.Count + monsters.Count);
