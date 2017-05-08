@@ -98,8 +98,11 @@ namespace FandF
             //see if monster dodges
             int dodgeCalc = (myChar.Dex + myChar.getItemDex()) - myMons.Dex;
 
+            //*** testing ****
+            dodgeCalc = 1000;
+
             //if attack is a hit
-            if(dodgeCalc > diceRoll){
+            if (dodgeCalc > diceRoll){
                 int damageCalc = (myChar.Str + myChar.getItemStr()) - myMons.Def;
                 if (damageCalc < 0)
                     damageCalc = 0;
@@ -125,6 +128,10 @@ namespace FandF
 
             //see if character dodges
             int dodgeCalc = myMons.Dex - (myChar.Dex + myChar.getItemDex());
+
+            //*** testing ****
+            dodgeCalc = 1000;
+            
 
 			//if attack is a hit
 			if (dodgeCalc > diceRoll)
