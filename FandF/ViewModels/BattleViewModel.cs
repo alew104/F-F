@@ -10,7 +10,7 @@ using FandF.Services;
 
 namespace FandF
 {
-    public class BattleViewModel : BaseViewModel//INotifyPropertyChanged
+    public class BattleViewModel : BaseViewModel
     {
         public Character C1 { get; set; }
         public Character C2 { get; set; }
@@ -23,6 +23,8 @@ namespace FandF
         public Monster m4 { get; set; }
 
         public Battle battle { get; set; }
+
+        public string output { get; set; }
 
         
         // the characters that are going to be in the battle
@@ -61,6 +63,14 @@ namespace FandF
             m3 = generateMonster(C3.Level);
             m4 = generateMonster(C4.Level);
             return new List<Monster> { m1, m2, m3, m4 };
+        }
+
+        public void setCharacters(List<Character> c)
+        {
+            C1 = c[0];
+            C2 = c[1];
+            C3 = c[2];
+            C4 = c[3];
         }
 
 

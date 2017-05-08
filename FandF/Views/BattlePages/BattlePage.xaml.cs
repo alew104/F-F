@@ -75,11 +75,16 @@ namespace FandF.Views
             {
                 if (!battle.areMonstersAlive())
                 {
+                    vm.generateNewMonsters();
+                    List<Character> c = battle.endOfBattle();
+                    vm.setCharacters(c);
                     //FIXME: need to make a new instance of a battle
                     //with new monsters, but the same characters...
 
                 }
                 battle.takeTurn();
+                // this is for output to the vm
+                //vm.output = battle.output();
                 //FIXME: output results of turn to screen
             }
         }

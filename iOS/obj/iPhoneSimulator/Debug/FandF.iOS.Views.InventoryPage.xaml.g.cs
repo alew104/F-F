@@ -11,7 +11,7 @@
 namespace FandF.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Users\\Alex Lew\\Source\\Repos\\Fungeons and Flagons\\FandF\\Views\\InventoryPage.xam" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Alex Lew\\Source\\Repos\\Fungeons and Flagons\\FandF\\Views\\InventoryPage.xam" +
         "l")]
     public partial class InventoryPage : global::Xamarin.Forms.ContentPage {
         
