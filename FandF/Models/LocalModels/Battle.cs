@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using FandF.Services;
 
 namespace FandF
 {
@@ -198,6 +199,31 @@ namespace FandF
                 }
             }
             return false;
+        }
+
+        public List<Character> endOfBattle()
+        {
+            int ITEMS_TO_GENERATE = 2;
+
+            DBItemController itemAccess = new DBItemController();
+            List<ItemDBModel> allItems = itemAccess.getAllItems();
+
+            Random rand = new Random();
+
+            //Generate random items and assign randomly to characters
+            for (int i = 0; i < ITEMS_TO_GENERATE; i++)
+            {
+                ItemDBModel myItemModel = allItems[rand.Next(0,allItems.Count)];
+                Item myItem = new Item(myItemModel.Name, myItemModel.Desc);
+                myItem.setDef(myItemModel.Def);
+                myItem.setDex(myItemModel.Dex);
+                myItem.setHealth(myItemModel.Health);
+                myItem.setStr(myItemModel.Str);
+
+                characters[rand.Next(0, 4)].addItem(myItem);
+            }
+
+            return characters;
         }
     }
 }
