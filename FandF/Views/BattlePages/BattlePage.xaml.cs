@@ -47,6 +47,8 @@ namespace FandF.Views
         //simulation that runs until all characters dead
         public void runSimulation()
         {
+            
+
             while(battle.isPartyAlive())
             {
                 if(!battle.areMonstersAlive())
@@ -64,7 +66,9 @@ namespace FandF.Views
                 }
                 battle.takeTurn();
             }
-            //FIXME: output results to screen
+            //FIXME: this goes to the end game stats, but i dont think the list im calling is the right one. how would i get the updated characterss?
+            GoToScore(vm.getCharacters());
+
         }
 
         //For the turn by turn functionality
@@ -87,6 +91,10 @@ namespace FandF.Views
                 //vm.output = battle.output();
                 //FIXME: output results of turn to screen
             }
+            else{
+                //FIXME: don't think the list i'm using is the right one in this call.
+                GoToScore(vm.getCharacters());
+            }
         }
 
         //SEE BATTLEPAGE.XAML FOR BUTTONS I ADDED
@@ -107,5 +115,10 @@ namespace FandF.Views
         {   
             await Navigation.PushAsync(new BattlePage(new BattleViewModel(c[0], c[1], c[2], c[3])));
         }
+
+		async void GoToScore(List<Character> c)
+		{
+            await Navigation.PushAsync(new EndGamePage(c));
+		}
     }
 }

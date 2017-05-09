@@ -48,6 +48,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\MonsterPages\NewMonsterPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Page1.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocalModels\Battle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EndGamePage.xaml.cs">
+      <DependentUpon>EndGamePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -56,6 +59,9 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Page1.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ScorePage.cs" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ScorePage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\EndGamePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CharacterPages\CharacterDetailPage.xaml" />
