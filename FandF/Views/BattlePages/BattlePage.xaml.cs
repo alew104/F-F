@@ -59,8 +59,8 @@ namespace FandF.Views
                     //with new monsters, but the same characters...
                     List<Character> c = battle.endOfBattle();
                     vm.generateNewMonsters();
-                    battle = new Battle(c, vm.getMonsters()); ; //I think we want to get the characters from the previous battle object,
-                                                                //So that their health doesnt magically regenerate when monsters die
+                    battle = new Battle(c, vm.getMonsters()); //I think we want to get the characters from the previous battle object,
+                                                              //So that their health doesnt magically regenerate when monsters die
 
                     //battle class reinstantiated
                 }

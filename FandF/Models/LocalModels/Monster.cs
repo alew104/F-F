@@ -277,7 +277,7 @@ namespace FandF
                 MaxHealth = this.MaxHealth + rand.Next(1, 11);
             }
 
-            this.Level += numLevels;
+            this.Level = this.Level + numLevels;
         }
     }
 }

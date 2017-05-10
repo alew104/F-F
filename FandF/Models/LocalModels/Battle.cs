@@ -79,7 +79,7 @@ namespace FandF
 
                     //Find living character to attack
                     Character charToAttack = characters[rand.Next(characters.Count)];
-                    while (!charToAttack.isAlive())
+                    while (!charToAttack.isAlive() && isPartyAlive())
                     {
                         charToAttack = characters[rand.Next(characters.Count)];
                     }
@@ -105,7 +105,7 @@ namespace FandF
             if (dodgeCalc > diceRoll){
                 int damageCalc = (myChar.Str + myChar.getItemStr()) - myMons.Def;
                 if (damageCalc < 0)
-                    damageCalc = 0;
+                    damageCalc = 2; //TESTING
 
                 //myMons.setCurrentHealth(myMons.getCurrentHealth()-damageCalc);
                 int monsHealth = myMons.CurrentHealth - damageCalc;
@@ -138,7 +138,7 @@ namespace FandF
 			{
                 int damageCalc = myMons.Str - (myChar.Def + myChar.getItemDef());
                 if (damageCalc < 0)
-                    damageCalc = 0;
+                    damageCalc = 2; //TESTING
 
                 int charHealth = myChar.CurrentHealth - damageCalc;
                 if (charHealth < 0)
