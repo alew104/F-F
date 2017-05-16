@@ -65,6 +65,7 @@ namespace FandF.Views
                     //battle class reinstantiated
                 }
                 battle.takeTurn();
+                vm.setOutput(battle.logLine);
             }
             //FIXME: this goes to the end game stats, but i dont think the list im calling is the right one. how would i get the updated characterss?
             GoToScore(vm.getCharacters());
@@ -87,6 +88,7 @@ namespace FandF.Views
 
                 }
                 battle.takeTurn();
+                vm.setOutput(battle.logLine);
                 // this is for output to the vm
                 //vm.output = battle.output();
                 //FIXME: output results of turn to screen

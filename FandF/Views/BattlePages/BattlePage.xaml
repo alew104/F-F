@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FandF.Views.BattlePage"
              Title="Battle">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Attack" Clicked="runTurn" />
+    </ContentPage.ToolbarItems>
     <ScrollView>
     <StackLayout Spacing="20" Padding="15">
         <!--
@@ -29,41 +32,93 @@
         -->
             <ScrollView>
                 <StackLayout>
-                    <Grid ColumnSpacing="20" RowSpacing="5" Padding="15">
+                    <Label Text="{Binding output}" FontSize="Medium"/>
+                    <Grid ColumnSpacing="20" RowSpacing="5" Padding="0" Margin="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Label Text="Characters" Grid.Row="0" Grid.Column="0" FontSize="Large" HorizontalTextAlignment="Center" />
-                    <Label Text="Monsters" Grid.Row="0" Grid.Column="1" FontSize="Large" HorizontalTextAlignment="Center"/>
-                    <Label Text="{Binding C1.Name}" Grid.Row="1" Grid.Column="0" FontSize="Medium"/>
-                    <Label Text="{Binding m1.Name}" Grid.Row="1" Grid.Column="1" FontSize="Medium"/>
-                    <Label Text="{Binding C1.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="2" Grid.Column="0" FontSize="Micro"/>
-                    <Label Text="{Binding m1.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="2" Grid.Column="1" FontSize="Micro"/>    
-                    <Label Text="{Binding C2.Name}" Grid.Row="3" Grid.Column="0" FontSize="Medium"/>
-                    <Label Text="{Binding m2.Name}" Grid.Row="3" Grid.Column="1" FontSize="Medium"/>
-                    <Label Text="{Binding C2.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="4" Grid.Column="0" FontSize="Micro"/>
-                    <Label Text="{Binding m2.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="4" Grid.Column="1" FontSize="Micro"/>    
-                    <Label Text="{Binding C3.Name}" Grid.Row="5" Grid.Column="0" FontSize="Medium"/>
-                    <Label Text="{Binding m3.Name}" Grid.Row="5" Grid.Column="1" FontSize="Medium"/>
-                    <Label Text="{Binding C3.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="6" Grid.Column="0" FontSize="Micro"/>
-                    <Label Text="{Binding m3.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="6" Grid.Column="1" FontSize="Micro"/>    
-                    <Label Text="{Binding C4.Name}" Grid.Row="7" Grid.Column="0" FontSize="Medium"/>
-                    <Label Text="{Binding m4.Name}" Grid.Row="7" Grid.Column="1" FontSize="Medium"/>
-                    <Label Text="{Binding C4.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="8" Grid.Column="0" FontSize="Micro"/>
-                    <Label Text="{Binding m4.CurrentHealth, StringFormat='Current Health: {0}'}" Grid.Row="8" Grid.Column="1" FontSize="Micro"/>    
-                </Grid>
+                        <StackLayout Grid.Row="1" Grid.Column="0" Margin="0" Padding="0,0,0,0">
+                            <Label Text="{Binding C1.Name}" FontSize="Small"/>
+                            <Label Text="{Binding C1.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C1.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C1.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C1.Dex, StringFormat='Current Dex: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C1.ExpPoints, StringFormat='Current EXP: {0}'}"  FontSize="Micro"/>
+                            <Label Text="{Binding C1.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="0" Margin="0" Padding="0,0,0,0">
+                            <Label Text="{Binding C2.Name}" FontSize="Small"/>
+                            <Label Text="{Binding C2.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C2.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C2.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C2.Dex, StringFormat='Current Dex: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C2.ExpPoints, StringFormat='Current EXP: {0}'}"  FontSize="Micro"/>
+                            <Label Text="{Binding C2.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="3" Grid.Column="0" Margin="0" Padding="0,0,0,0">
+                            <Label Text="{Binding C3.Name}" FontSize="Small"/>
+                            <Label Text="{Binding C3.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C3.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C3.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C3.Dex, StringFormat='Current Dex: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C3.ExpPoints, StringFormat='Current EXP: {0}'}"  FontSize="Micro"/>
+                            <Label Text="{Binding C3.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="4" Grid.Column="0" Margin="0" Padding="0,0,0,0">
+                            <Label Text="{Binding C4.Name}" FontSize="Small"/>
+                            <Label Text="{Binding C4.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C4.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C4.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C4.Dex, StringFormat='Current Dex: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding C4.ExpPoints, StringFormat='Current EXP: {0}'}"  FontSize="Micro"/>
+                            <Label Text="{Binding C4.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.Column="1" Margin="0" Padding="0,0,0,0">
+                            <Label Text="{Binding m1.Name}" FontSize="Small"/>
+                            <Label Text="{Binding m1.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m1.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m1.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m1.Dex, StringFormat='Current Dex: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m1.ExpValue, StringFormat='Current EXP: {0}'}"  FontSize="Micro"/>
+                            <Label Text="{Binding m1.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="1" Margin="0" Padding="0,0,0,0">
+                            <Label Text="{Binding m2.Name}" FontSize="Small"/>
+                            <Label Text="{Binding m2.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m2.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m2.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m2.Dex, StringFormat='Current Dex: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m2.ExpValue, StringFormat='Current EXP: {0}'}"  FontSize="Micro"/>
+                            <Label Text="{Binding m2.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="3" Grid.Column="1" Margin="0" Padding="0,0,0,0">
+                            <Label Text="{Binding m3.Name}" FontSize="Small"/>
+                            <Label Text="{Binding m3.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m3.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m3.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m3.Dex, StringFormat='Current Dex: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m3.ExpValue, StringFormat='Current EXP: {0}'}"  FontSize="Micro"/>
+                            <Label Text="{Binding m3.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="4" Grid.Column="1" Margin="0" Padding="0,0,0,0">
+                            <Label Text="{Binding m4.Name}" FontSize="Small"/>
+                            <Label Text="{Binding m4.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m4.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m4.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m4.Dex, StringFormat='Current Dex: {0}'}" FontSize="Micro"/>
+                            <Label Text="{Binding m4.ExpValue, StringFormat='Current EXP: {0}'}"  FontSize="Micro"/>
+                            <Label Text="{Binding m4.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
+                        </StackLayout>
+                        <Label Text="Characters" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" />
+                        <Label Text="Monsters" Grid.Row="0" Grid.Column="1" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                    </Grid>
 
-                    <Label Text="{Binding C1.Level, StringFormat='Current Level: {0}'}"  FontSize="Micro"/>
-                    <Label Text="{Binding C1.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
-                    <Label Text="{Binding C1.MaxHealth, StringFormat='Current MaxHealth: {0}'}" FontSize="Micro"/>
-                    <Label Text="{Binding C1.Dex, StringFormat='Current Dex: {0}'}" FontSize="Micro"/>
-                    <Label Text="{Binding C1.ExpPoints, StringFormat='Current EXP: {0}'}" FontSize="Micro"/>
-                    <Label Text="{Binding C1.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
+
                 </StackLayout>
                 
         </ScrollView>

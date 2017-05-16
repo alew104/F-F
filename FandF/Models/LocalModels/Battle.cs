@@ -92,6 +92,7 @@ namespace FandF
 
         public void charAttack(Character myChar, Monster myMons)
         {
+            int damageCalc = 0;
             Random rand = new Random();
             int diceRoll = rand.Next(1, 21);
 
@@ -103,7 +104,7 @@ namespace FandF
 
             //if attack is a hit
             if (dodgeCalc > diceRoll){
-                int damageCalc = (myChar.Str + myChar.getItemStr()) - myMons.Def;
+                damageCalc = (myChar.Str + myChar.getItemStr()) - myMons.Def;
                 if (damageCalc < 0)
                     damageCalc = 2; //TESTING
 
@@ -119,10 +120,13 @@ namespace FandF
                 }
             }
 
+            logLine = myChar.Name + " attacked " + myMons.Name + " for " + damageCalc + " damage!";
+
         }
 
         public void monsAttack(Monster myMons, Character myChar)
         {
+            int damageCalc = 0;
             Random rand = new Random();
             int diceRoll = rand.Next(1, 21);
 
@@ -136,7 +140,7 @@ namespace FandF
 			//if attack is a hit
 			if (dodgeCalc > diceRoll)
 			{
-                int damageCalc = myMons.Str - (myChar.Def + myChar.getItemDef());
+                damageCalc = myMons.Str - (myChar.Def + myChar.getItemDef());
                 if (damageCalc < 0)
                     damageCalc = 2; //TESTING
 
@@ -146,6 +150,7 @@ namespace FandF
 
                 myChar.CurrentHealth = charHealth;
 			}
+            logLine = myMons.Name + " attacked " + myChar.Name + " for " + damageCalc + " damage!"; ;
         }
 
         private Monster getMonsterWithLeastHealth()

@@ -22,8 +22,6 @@ namespace FandF
         public Monster m3 { get; set; }
         public Monster m4 { get; set; }
 
-        public Battle battle { get; set; }
-
         public string output { get; set; }
         public string Title { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
@@ -98,6 +96,14 @@ namespace FandF
             // generate new monster
             return new Monster(m.Name, m.Image, m.Str, m.Def, m.Dex, m.Health, level, m.ExpValue);
         }
+
+        public void setOutput(string logLine)
+        {
+            this.output = logLine;
+            OnPropertyChanged("output");
+        }
+
+
 
         protected void OnPropertyChanged(string propertyName)
         {
