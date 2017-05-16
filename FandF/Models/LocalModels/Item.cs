@@ -5,7 +5,7 @@ namespace FandF
     public class Item : ObservableObject
     {
 
-        public string _name;
+        public string _name {get; set;}
         public string _desc;
         private int _str;
         private int _def;

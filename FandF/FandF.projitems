@@ -27,6 +27,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BattleViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CharacterDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CharacterInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MonsterDetailViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
@@ -39,6 +40,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterPages\CharacterDetailPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterPages\CharacterPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterPages\NewCharacterPage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CharacterPages\CharacterInfoPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\InventoryPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ItemPages\ItemDetailPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ItemPages\ItemsPage.xaml.cs" />
@@ -82,5 +86,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BattlePages\BattlePage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CharacterPages\CharacterInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

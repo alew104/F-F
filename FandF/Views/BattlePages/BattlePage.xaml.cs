@@ -122,5 +122,18 @@ namespace FandF.Views
 		{
             await Navigation.PushAsync(new EndGamePage(c));
 		}
+
+        async void OnTapGestureRecognizerTapped(object sender, EventArgs args) { 
+            var label = (Label)sender;
+            string text = label.Text;
+            List<Character> list = vm.getCharacters();
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (text.Equals(list[i].Name))
+                {
+                    await Navigation.PushAsync(new CharacterInfoPage(new CharacterInfo(list[i])));
+                }
+            }
+        }
     }
 }

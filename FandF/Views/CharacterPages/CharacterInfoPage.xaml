@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FandF.Views.CharacterInfoPage"
+             Title="{Binding Title, StringFormat='{0} Inventory'}">
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="15">
+            <ListView x:Name="ItemsListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding _name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+</ScrollView>
+</ContentPage>

@@ -7,32 +7,10 @@
         <ToolbarItem Text="Attack" Clicked="runTurn" />
     </ContentPage.ToolbarItems>
     <ScrollView>
-    <StackLayout Spacing="20" Padding="15">
-        <!--
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="Character 1" FontSize="Medium" />
-            <Label Text="{Binding C1.Name}" FontSize="Small" />
-            <Label Text="Character 2" FontSize="Medium" />
-            <Label Text="{Binding C2.Name}" FontSize="Small" />
-            <Label Text="Character 3" FontSize="Medium" />
-            <Label Text="{Binding C3.Name}" FontSize="Small" />
-            <Label Text="Character 4" FontSize="Medium" />
-            <Label Text="{Binding C4.Name}" FontSize="Small" />
-            <Button Margin="0,10,0,0"
-             Text="Attack" 
-             Clicked="Button_Clicked"
-             BackgroundColor="{StaticResource Primary}"
-             TextColor="White"/>
-            <Button Margin="0,10,0,0"
-             Text="Run To End"
-             Clicked="Button_Clicked"
-             BackgroundColor="{StaticResource Primary}"
-             TextColor="White"/>
-        </StackLayout>
-        -->
             <ScrollView>
                 <StackLayout>
-                    <Label Text="{Binding output}" FontSize="Medium"/>
+                    <Label Text="{Binding output}" FontSize="Medium" HorizontalTextAlignment="Center"/>
                     <Grid ColumnSpacing="20" RowSpacing="5" Padding="0" Margin="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -43,7 +21,13 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                         <StackLayout Grid.Row="1" Grid.Column="0" Margin="0" Padding="0,0,0,0">
-                            <Label Text="{Binding C1.Name}" FontSize="Small"/>
+                            <Label Text="{Binding C1.Name}" FontSize="Small">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    Tapped="OnTapGestureRecognizerTapped"
+                                    NumberOfTapsRequired="1" />
+                                </Label.GestureRecognizers>
+                            </Label>
                             <Label Text="{Binding C1.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding C1.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding C1.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
@@ -52,7 +36,13 @@
                             <Label Text="{Binding C1.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
                         </StackLayout>
                         <StackLayout Grid.Row="2" Grid.Column="0" Margin="0" Padding="0,0,0,0">
-                            <Label Text="{Binding C2.Name}" FontSize="Small"/>
+                            <Label Text="{Binding C2.Name}" FontSize="Small">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="OnTapGestureRecognizerTapped"
+                                    NumberOfTapsRequired="1" />
+                            </Label.GestureRecognizers>
+                            </Label>
                             <Label Text="{Binding C2.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding C2.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding C2.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
@@ -61,7 +51,13 @@
                             <Label Text="{Binding C2.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
                         </StackLayout>
                         <StackLayout Grid.Row="3" Grid.Column="0" Margin="0" Padding="0,0,0,0">
-                            <Label Text="{Binding C3.Name}" FontSize="Small"/>
+                            <Label Text="{Binding C3.Name}" FontSize="Small">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="OnTapGestureRecognizerTapped"
+                                    NumberOfTapsRequired="1" />
+                            </Label.GestureRecognizers>
+                            </Label>
                             <Label Text="{Binding C3.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding C3.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding C3.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
@@ -70,7 +66,13 @@
                             <Label Text="{Binding C3.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
                         </StackLayout>
                         <StackLayout Grid.Row="4" Grid.Column="0" Margin="0" Padding="0,0,0,0">
-                            <Label Text="{Binding C4.Name}" FontSize="Small"/>
+                            <Label Text="{Binding C4.Name}" FontSize="Small">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="OnTapGestureRecognizerTapped"
+                                    NumberOfTapsRequired="1" />
+                            </Label.GestureRecognizers>
+                            </Label>
                             <Label Text="{Binding C4.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding C4.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding C4.Str, StringFormat='Current Str: {0}'}" FontSize="Micro"/>
