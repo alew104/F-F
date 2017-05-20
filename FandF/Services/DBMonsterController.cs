@@ -101,5 +101,19 @@ namespace FandF.Services
         {
             return database.Query<MonsterDBModel>("SELECT * FROM ItemDBModel");
         }
+
+        public void closeDatabase()
+        {
+            lock (collisionLock)
+            {
+                database.Close();
+            }
+        }
+
+        public void openDatabase()
+        {
+            database = DependencyService.Get<IDatabaseConnection>().
+                            DbConnection();
+        }
     }
 }

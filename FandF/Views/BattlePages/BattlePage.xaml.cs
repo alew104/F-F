@@ -11,7 +11,8 @@ namespace FandF.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class BattlePage : ContentPage
-	{   
+	{
+        int battles = 0;
         BattleViewModel vm;
         Battle battle;
 		public BattlePage (BattleViewModel bm)
@@ -63,6 +64,7 @@ namespace FandF.Views
                                                               //So that their health doesnt magically regenerate when monsters die
 
                     //battle class reinstantiated
+                    battles++;
                 }
                 battle.takeTurn();
                 vm.setOutput(battle.logLine);
@@ -82,6 +84,7 @@ namespace FandF.Views
                     List<Character> c = battle.endOfBattle();
                     vm.generateNewMonsters();
                     battle = new Battle(c, vm.getMonsters());
+                    battles++;
                     //newBattle(c);
                     //FIXME: need to make a new instance of a battle
                     //with new monsters, but the same characters...
@@ -120,7 +123,7 @@ namespace FandF.Views
 
 		async void GoToScore(List<Character> c)
 		{
-            await Navigation.PushAsync(new EndGamePage(c));
+            await Navigation.PushAsync(new EndGamePage(c, battles));
 		}
 
         async void OnTapGestureRecognizerTapped(object sender, EventArgs args) { 

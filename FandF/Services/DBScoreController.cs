@@ -6,47 +6,39 @@ using System.Linq;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using FandF.Helpers;
+using FandF.Models.DBModels;
 
 namespace FandF.Services
 {
-    class DBItemController
+    class DBScoreController
     {
         private SQLiteConnection database;
         private static object collisionLock = new object();
-        public ObservableCollection<ItemDBModel> Items { get; set; }
+        public ObservableCollection<Score> Items { get; set; }
 
-        public DBItemController()
+        public DBScoreController()
         {
             database =
                 DependencyService.Get<IDatabaseConnection>().
                 DbConnection();
 
             this.Items =
-                new ObservableCollection<ItemDBModel>(database.Table<ItemDBModel>());
+                new ObservableCollection<Score>(database.Table<Score>());
 
             // If the table is empty, initialize the collection
-            if (!database.Table<ItemDBModel>().Any())
+            if (!database.Table<Score>().Any())
             {
-                ItemDBModel c1 = new ItemDBModel { Name = "Mjollnir", Desc = "Thor's very own hammer", Str = 10, Dex = 5 };
-                ItemDBModel c2 = new ItemDBModel { Name = "Excalibur", Desc = "An ancient holy sword", Def = 10, Str = 5 };
-                ItemDBModel c3 = new ItemDBModel { Name = "Muramasa", Desc  = "A cursed Japanese blade", Def = -10, Dex = 15, Health = -5, Str = 15 };
-                ItemDBModel c4 = new ItemDBModel { Name = "Odin's Shield",Desc = "The shield used to defend Asgard",  Def = 10, Health = 5};
-
-                SaveItem(c1);
-                SaveItem(c2);
-                SaveItem(c3);
-                SaveItem(c4);
             }
         }
 
-        public int DeleteItem(ItemDBModel item)
+        public int DeleteItem(Score item)
         {
             var id = item.Id;
             if (id != 0)
             {
                 lock (collisionLock)
                 {
-                    database.Delete<ItemDBModel>(id);
+                    database.Delete<Score>(id);
                 }
             }
             this.Items.Remove(item);
@@ -54,7 +46,7 @@ namespace FandF.Services
         }
 
 
-        public int SaveItem(ItemDBModel item)
+        public int SaveItem(Score item)
         {
             lock (collisionLock)
             {
@@ -71,16 +63,16 @@ namespace FandF.Services
             }
         }
 
-         // Takes an ID of a item and finds the item
+        // Takes an ID of a item and finds the item
         // returns a item with ID -1 if there was an error
-        public ItemDBModel getItem(int id)
+        public Score getItem(int id)
         {
             lock (collisionLock)
             {
-                List<ItemDBModel> result = database.Query<ItemDBModel>("select * from ItemDBModel where id = ?", id);
+                List<Score> result = database.Query<Score>("select * from Score where id = ?", id);
                 if (result.Count == 0)
                 {
-                    return new ItemDBModel {Id = -1, Name = "Query Error"};
+                    return new Score { Id = -1, Points = -1 };
                 }
                 return result[0];
             }
@@ -91,14 +83,14 @@ namespace FandF.Services
         {
             lock (collisionLock)
             {
-                List<ItemDBModel> result = database.Query<ItemDBModel>("SELECT * FROM ItemDBModel");
+                List<Score> result = database.Query<Score>("SELECT * FROM Score");
                 return result.Count;
             }
         }
 
-        public List<ItemDBModel> getAllItems()
+        public List<Score> getAllItems()
         {
-            return database.Query<ItemDBModel>("SELECT * FROM ItemDBModel");
+            return database.Query<Score>("SELECT * FROM Score");
         }
 
         public void closeDatabase()

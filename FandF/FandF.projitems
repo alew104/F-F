@@ -15,6 +15,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\MessagingCenterAlert.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBModels\CharacterDBModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DBModels\PartyScore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DBModels\Score.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBModels\ItemDBModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBModels\MonsterDBModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocalModels\Character.cs" />
@@ -23,6 +25,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\DBCharacterController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DBItemController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DBMonsterController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DBPartyController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DBScoreController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BattleViewModel.cs" />

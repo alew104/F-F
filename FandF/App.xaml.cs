@@ -3,6 +3,7 @@ using SQLite;
 using Xamarin.Forms;
 using FandF.Helpers;
 using FandF.Views;
+using FandF.Models.DBModels;
 
 namespace FandF
 {
@@ -20,6 +21,8 @@ namespace FandF
             database.CreateTable<ItemDBModel>();
             database.CreateTable<CharacterDBModel>();
             database.CreateTable<MonsterDBModel>();
+            database.CreateTable<Score>();
+            database.CreateTable<PartyScore>();
             GoToMainPage();
         }
 

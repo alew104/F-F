@@ -108,6 +108,13 @@ namespace FandF.Services
             return database.Query<CharacterDBModel>("SELECT * FROM CharacterDBModel");
         }
 
+        public void closeDatabase()
+        {
+            lock (collisionLock)
+            {
+                database.Close();
+            }
+        }
 
     }
 }
