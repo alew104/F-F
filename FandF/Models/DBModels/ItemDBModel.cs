@@ -149,6 +149,21 @@ namespace FandF
             }
         }
 
+        private string _creator;
+
+        public string Creator
+        {
+            get
+            {
+                return _creator;
+            }
+            set
+            {
+                this._creator = value;
+                OnPropertyChanged(nameof(Usage));
+            }
+        }
+
         public int getStr()
         {
             return _str;
