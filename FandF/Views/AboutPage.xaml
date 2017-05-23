@@ -58,7 +58,13 @@
             </FormattedString>
           </Label.FormattedText>
         </Label>
-      </StackLayout>
+
+        <Button Margin="0,10,0,0"
+        Text="POST 4" 
+        Clicked="OnButtonClicked"
+        BackgroundColor="{StaticResource Primary}"
+        TextColor="White"/>
+            </StackLayout>
     </ScrollView>
   </Grid>
 </ContentPage>

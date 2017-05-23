@@ -105,6 +105,65 @@ namespace FandF
             }
         }
 
+        private string _uri;
+        public string URI
+        {
+            get
+            {
+                return _uri;
+            }
+            set
+            {
+                this._uri = value;
+                OnPropertyChanged(nameof(URI));
+            }
+        }
+
+        private string _bodypart;
+
+        public string BodyPart
+        {
+            get
+            {
+                return _bodypart;
+            }
+            set
+            {
+                this._bodypart = value;
+                OnPropertyChanged(nameof(BodyPart));
+            }
+        }
+
+        public int _usage;
+
+        public int Usage
+        {
+            get
+            {
+                return _usage;
+            }
+            set
+            {
+                this._usage = value;
+                OnPropertyChanged(nameof(Usage));
+            }
+        }
+
+        private string _creator;
+
+        public string Creator
+        {
+            get
+            {
+                return _creator;
+            }
+            set
+            {
+                this._creator = value;
+                OnPropertyChanged(nameof(Usage));
+            }
+        }
+
         public int getStr()
         {
             return _str;

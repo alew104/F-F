@@ -23,6 +23,7 @@ namespace FandF
             database.CreateTable<MonsterDBModel>();
             database.CreateTable<Score>();
             database.CreateTable<PartyScore>();
+            database.Close();
             GoToMainPage();
         }
 

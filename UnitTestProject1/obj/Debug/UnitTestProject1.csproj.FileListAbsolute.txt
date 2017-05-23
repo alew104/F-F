@@ -82,3 +82,4 @@ E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\bin\Debug\F
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 E:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\Alex Lew\Source\Repos\Fungeons and Flagons\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache

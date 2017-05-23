@@ -108,5 +108,21 @@ namespace FandF.Services
                 database.Close();
             }
         }
+
+        public void dropTable()
+        {
+            lock (collisionLock)
+            {
+                database.DropTable<ItemDBModel>();
+            }
+        }
+
+        public void createTable()
+        {
+            lock (collisionLock)
+            {
+                database.CreateTable<ItemDBModel>();
+            }
+        }
     }
 }

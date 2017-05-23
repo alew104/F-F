@@ -6,15 +6,21 @@
     <ScrollView>
         <StackLayout Spacing="20" Padding="15">
             <Label Text="{Binding Item.Name}" FontSize="Medium" />
-            <Label Text="{Binding Item.Desc}" FontSize="Small" />
+            <Image Source="{Binding Item.URI}"/>
+            <Label Text="Health" FontSize="Medium" />
+            <Label Text="{Binding Item.Health}" FontSize="Small" />
             <Label Text="Strength" FontSize="Medium" />
             <Label Text="{Binding Item.Str}" FontSize="Small" />
             <Label Text="Defense" FontSize="Medium" />
             <Label Text="{Binding Item.Def}" FontSize="Small" />
             <Label Text="Dexterity" FontSize="Medium" />
             <Label Text="{Binding Item.Dex}" FontSize="Small" />
-            <Label Text="Health" FontSize="Medium" />
-            <Label Text="{Binding Item.Health}" FontSize="Small" />
+            <Label Text="BodyPart" FontSize="Medium" />
+            <Label Text="{Binding Item.BodyPart}" FontSize="Small" />
+            <Label Text="Usage" FontSize="Medium" />
+            <Label Text="{Binding Item.Usage}" FontSize="Small" />
+            <Label Text="Creator" FontSize="Medium" />
+            <Label Text="{Binding Item.Creator}" FontSize="Small" />
             <Button Margin="0,10,0,0"
                     Text="Update Item"
                     Clicked="UpdateItem"
