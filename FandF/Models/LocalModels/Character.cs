@@ -267,6 +267,17 @@ namespace FandF
             items.Add(newThing);
         }
 
+        //Adds a new item to the inventory of this character
+        public Item removeRandomItem()
+        {
+            Random rand = new Random();
+            int itemToRemove = rand.Next(0, items.Count);
+            Item itemToReturn = items[itemToRemove];
+            items.RemoveAt(itemToRemove);
+
+            return itemToReturn;
+        }
+
         //The following functions return the total item modifiers that are
         //attached to items in the character's inventory
         public int getItemStr()

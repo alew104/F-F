@@ -96,17 +96,16 @@ namespace FandF
             Random rand = new Random();
             int diceRoll = rand.Next(1, 21);
 
-            //see if monster dodges
-            int dodgeCalc = (myChar.Dex + myChar.getItemDex()) - myMons.Dex;
-
-            //*** testing ****
-            dodgeCalc = 1000;
+            int missThreshold = 4;
 
             //if attack is a hit
-            if (dodgeCalc > diceRoll){
+            if (diceRoll > missThreshold)
+            {
                 damageCalc = (myChar.Str + myChar.getItemStr()) - myMons.Def;
-                if (damageCalc < 0)
+                if (damageCalc <= 0)
                     damageCalc = 2; //TESTING
+                if (diceRoll == 20) //Critical hit
+                    damageCalc *= 2;
 
                 //myMons.setCurrentHealth(myMons.getCurrentHealth()-damageCalc);
                 int monsHealth = myMons.CurrentHealth - damageCalc;
@@ -115,13 +114,38 @@ namespace FandF
 
                 myMons.CurrentHealth = monsHealth;
                 //if monster dies, character gains expvalue
-                if(myMons.CurrentHealth <= 0){
+                if (myMons.CurrentHealth <= 0)
+                {
                     myChar.gainExp(myMons.expValue);
                 }
+
+                if(diceRoll == 20)
+                    logLine = myChar.Name + " critically hit " + myMons.Name + " for " + damageCalc + " damage!!!";
+                else
+                    logLine = myChar.Name + " hit " + myMons.Name + " for " + damageCalc + " damage!";
+
+
+            } else if (diceRoll == 1) { //Critical miss
+                criticalMiss(myChar, myMons);
+            }
+            else
+            {
+                logLine = myChar.Name + "  missed " + myMons.Name;
             }
 
-            logLine = myChar.Name + " attacked " + myMons.Name + " for " + damageCalc + " damage!";
+        }
 
+        private void criticalMiss(Character myChar, Monster myMons)
+        {
+            if (myChar.items.Count > 0)
+            {
+                Item removedItem = myChar.removeRandomItem();
+                logLine = myChar.Name + " critically missed " + myMons.Name + " and dropped " + removedItem._name + "!";
+            }
+            else
+            {
+                logLine = myChar.Name + " critically missed " + myMons.Name + " but had nothing to drop!";
+            }
         }
 
         public void monsAttack(Monster myMons, Character myChar)
@@ -130,27 +154,32 @@ namespace FandF
             Random rand = new Random();
             int diceRoll = rand.Next(1, 21);
 
-            //see if character dodges
-            int dodgeCalc = myMons.Dex - (myChar.Dex + myChar.getItemDex());
-
-            //*** testing ****
-            dodgeCalc = 1000;
+            int missThreshold = 4;
             
 
 			//if attack is a hit
-			if (dodgeCalc > diceRoll)
+			if (diceRoll > missThreshold)
 			{
                 damageCalc = myMons.Str - (myChar.Def + myChar.getItemDef());
-                if (damageCalc < 0)
+                if (damageCalc <= 0)
                     damageCalc = 2; //TESTING
+                if (diceRoll == 20) //Critical hit
+                    damageCalc *= 2;
 
                 int charHealth = myChar.CurrentHealth - damageCalc;
                 if (charHealth < 0)
                     charHealth = 0;
 
                 myChar.CurrentHealth = charHealth;
-			}
-            logLine = myMons.Name + " attacked " + myChar.Name + " for " + damageCalc + " damage!"; ;
+
+                if(diceRoll == 20)
+                    logLine = myMons.Name + " critially hit " + myChar.Name + " for " + damageCalc + " damage!!!";
+                else
+                    logLine = myMons.Name + " attacked " + myChar.Name + " for " + damageCalc + " damage!";
+            } else
+            {
+                logLine = myMons.Name + " missed " + myChar.Name;
+            }
         }
 
         private Monster getMonsterWithLeastHealth()
