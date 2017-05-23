@@ -22,6 +22,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocalModels\Character.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocalModels\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocalModels\Monster.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\APIController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DBCharacterController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DBItemController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DBMonsterController.cs" />
