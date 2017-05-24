@@ -261,7 +261,10 @@ namespace FandF
                 myItem.setHealth(myItemModel.Health);
                 myItem.setStr(myItemModel.Str);
 
-                characters[rand.Next(0, 4)].addItem(myItem);
+                int charToAssign = rand.Next(0, 4);
+                while(isPartyAlive() && !characters[charToAssign].isAlive())
+                    charToAssign = rand.Next(0, 4);
+                characters[charToAssign].addItem(myItem);
             }
 
             return characters;
