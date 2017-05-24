@@ -183,8 +183,12 @@ namespace FandF
                     damageCalc = 2; //TESTING
                 if (diceRoll == 20) //Critical hit
                     damageCalc *= 2;
+                
+                if(myChar.items[4] == null)
+                {
+                    damageCalc = 2;
+                }
 
-                //myMons.setCurrentHealth(myMons.getCurrentHealth()-damageCalc);
                 int monsHealth = myMons.CurrentHealth - damageCalc;
                 if (monsHealth < 0)
                     monsHealth = 0;
@@ -196,10 +200,25 @@ namespace FandF
                     myChar.gainExp(myMons.expValue);
                 }
 
+                //Usage stuff
+                Item attkItem = new Item("fists", "hard meat hammers");
+                String itemStatus = "!";
+
+                if (myChar.items[4] != null)
+                {
+                    attkItem = myChar.items[4];
+                    myChar.items[4].setUsage(myChar.items[4].getUsage() - 1);
+                    if (myChar.items[4].getUsage() <= 0)
+                    {
+                        myChar.items[4] = null;
+                        itemStatus = " and it broke!";
+                    }
+                }
+
                 if (diceRoll == 20)
-                    logLine = myChar.Name + " critically hit " + myMons.Name + " for " + damageCalc + " damage!!!";
+                    logLine = myChar.Name + " critically hit " + myMons.Name + " for " + damageCalc + " damage using " + attkItem._name + itemStatus;
                 else
-                    logLine = myChar.Name + " hit " + myMons.Name + " for " + damageCalc + " damage!";
+                    logLine = myChar.Name + " hit " + myMons.Name + " for " + damageCalc + " damage using " + attkItem._name + itemStatus;
 
 
             }
@@ -252,10 +271,33 @@ namespace FandF
 
                 myChar.CurrentHealth = charHealth;
 
-                if(diceRoll == 20)
-                    logLine = myMons.Name + " critially hit " + myChar.Name + " for " + damageCalc + " damage!!!";
+                //Usage stuff
+                String itemStatus = "!";
+                int itemIndex;
+                if (myChar.items[0] != null)
+                    itemIndex = 0;
+                else if (myChar.items[1] != null)
+                    itemIndex = 1;
+                else if (myChar.items[2] != null)
+                    itemIndex = 2;
                 else
-                    logLine = myMons.Name + " attacked " + myChar.Name + " for " + damageCalc + " damage!";
+                    itemIndex = 3;
+
+                if (myChar.items[itemIndex] != null)
+                {
+                    Item itemToStrike = myChar.items[itemIndex];
+                    itemToStrike.setUsage(itemToStrike.getUsage() - 1);
+                    if (itemToStrike.getUsage() <= 0)
+                    {
+                        myChar.items[itemIndex] = null;
+                        itemStatus = " and the " + itemToStrike._name + " broke!";
+                    }
+                }
+
+                if (diceRoll == 20)
+                    logLine = myMons.Name + " critially attacked " + myChar.Name + " for " + damageCalc + " damage" + itemStatus;
+                else
+                    logLine = myMons.Name + " attacked " + myChar.Name + " for " + damageCalc + " damage" + itemStatus;
             } else
             {
                 logLine = myMons.Name + " missed " + myChar.Name;
