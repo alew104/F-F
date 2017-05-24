@@ -21,7 +21,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                         <StackLayout Grid.Row="1" Grid.Column="0" Margin="0" Padding="0,0,0,0">
-                            <Image Source="{Binding C1.Image}"/>
+                            <Image Source="Thief.png"/>
                             <Label Text="{Binding C1.Name}" FontSize="Small">
                                 <Label.GestureRecognizers>
                                     <TapGestureRecognizer
@@ -37,7 +37,7 @@
                             <Label Text="{Binding C1.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
                         </StackLayout>
                         <StackLayout Grid.Row="2" Grid.Column="0" Margin="0" Padding="0,0,0,0">
-                            <Image Source="{Binding C2.Image}"/>
+                            <Image Source="Knight.jpg"/>
                             <Label Text="{Binding C2.Name}" FontSize="Small">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer
@@ -53,7 +53,7 @@
                             <Label Text="{Binding C2.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
                         </StackLayout>
                         <StackLayout Grid.Row="3" Grid.Column="0" Margin="0" Padding="0,0,0,0">
-                            <Image Source="{Binding C3.Image}"/>
+                            <Image Source="Archer.png"/>
                             <Label Text="{Binding C3.Name}" FontSize="Small">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer
@@ -69,7 +69,7 @@
                             <Label Text="{Binding C3.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
                         </StackLayout>
                         <StackLayout Grid.Row="4" Grid.Column="0" Margin="0" Padding="0,0,0,0">
-                            <Image Source="{Binding C4.Image}"/>
+                            <Image Source="Mage.jpg"/>
                             <Label Text="{Binding C4.Name}" FontSize="Small">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer
@@ -85,7 +85,7 @@
                             <Label Text="{Binding C4.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
                         </StackLayout>
                         <StackLayout Grid.Row="1" Grid.Column="1" Margin="0" Padding="0,0,0,0">
-                            <Image Source="{Binding m1.Image}"/>
+                            <Image Source="skeleton.png"/>
                             <Label Text="{Binding m1.Name}" FontSize="Small"/>
                             <Label Text="{Binding m1.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding m1.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
@@ -95,7 +95,7 @@
                             <Label Text="{Binding m1.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
                         </StackLayout>
                         <StackLayout Grid.Row="2" Grid.Column="1" Margin="0" Padding="0,0,0,0">
-                            <Image Source="{Binding m2.Image}"/>
+                            <Image Source="troll.png"/>
                             <Label Text="{Binding m2.Name}" FontSize="Small"/>
                             <Label Text="{Binding m2.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding m2.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
@@ -105,7 +105,7 @@
                             <Label Text="{Binding m2.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
                         </StackLayout>
                         <StackLayout Grid.Row="3" Grid.Column="1" Margin="0" Padding="0,0,0,0">
-                            <Image Source="{Binding m3.Image}"/>
+                            <Image Source="skeleton.png"/>
                             <Label Text="{Binding m3.Name}" FontSize="Small"/>
                             <Label Text="{Binding m3.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding m3.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>
@@ -115,7 +115,7 @@
                             <Label Text="{Binding m3.Def, StringFormat='Current Def: {0}'}" FontSize="Micro"/>
                         </StackLayout>
                         <StackLayout Grid.Row="4" Grid.Column="1" Margin="0" Padding="0,0,0,0">
-                            <Image Source="{Binding m4.Image}"/>
+                            <Image Source="skeleton.png"/>
                             <Label Text="{Binding m4.Name}" FontSize="Small"/>
                             <Label Text="{Binding m4.Level, StringFormat='Current Level: {0}'}" FontSize="Micro"/>
                             <Label Text="{Binding m4.CurrentHealth, StringFormat='Current Health: {0}'}" FontSize="Micro"/>

@@ -480,5 +480,17 @@ C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\Xamarin.Forms.X
 C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\android\assets\FandF.Droid.dll.mdb
 C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\FandF.Droid.csprojResolveAssemblyReference.cache
 C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\FandF.Droid.Views.SettingsPage.xaml.g.cs
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable\archer.png
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable\knight.jpg
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable\skeleton.png
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable\thief.png
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable\troll.png
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable-hdpi\archer.png
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable-hdpi\knight.jpg
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable-hdpi\skeleton.png
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable-hdpi\thief.png
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable-hdpi\troll.png
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable\mage.jpg
+C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\res\drawable-hdpi\mage.jpg
 C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\obj\Debug\FandF.Droid.dll.mdb
 C:\Users\Atlas\Source\Repos\Fungeons and Flagons\Droid\bin\Debug\FandF.Droid.dll.mdb
