@@ -14,6 +14,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableRangeCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\MessagingCenterAlert.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DBModels\BatEffects.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBModels\CharacterDBModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBModels\PartyScore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DBModels\Score.cs" />
@@ -23,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocalModels\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocalModels\Monster.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\APIController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DBBatFXController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DBCharacterController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DBItemController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DBMonsterController.cs" />

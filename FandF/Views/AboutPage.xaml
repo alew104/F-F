@@ -11,7 +11,7 @@
         </Grid.RowDefinitions>
         <ScrollView Grid.Row="1">
       <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-        <Image Source="team.jpg" />        
+        <Image Source="http://i.imgur.com/35Rb8i5.jpg" />        
         <Label FontSize="22">
           <Label.FormattedText>
             <FormattedString>

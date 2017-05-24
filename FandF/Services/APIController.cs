@@ -18,6 +18,7 @@ namespace FandF.Services
     class APIController
     {
         List<ItemDBModel> api;
+        List<BatEffects> bat;
         private static readonly HttpClient client = new HttpClient();
         DBItemController db;
         public APIController()
@@ -101,6 +102,48 @@ namespace FandF.Services
                         Usage = (int)property.SelectToken("Usage"),
                     });
                 }
+            }
+        }
+
+        public async void postJSONBattle()
+        {
+            //Debug.WriteLine("***********************\n" + post.random +"\n" + "***********************\n");
+            // Debug.WriteLine("***********************\n" + post.type + "\n" + "***********************\n");
+            //Debug.WriteLine("***********************\n" + post.level + "\n" + "***********************\n");
+            var postRequest = new Dictionary<string, string>
+            {
+            };
+            var content = new FormUrlEncodedContent(postRequest);
+            Debug.WriteLine("***********************\n" + " POSTING \n" + "***********************\n");
+            var response = await client.PostAsync("http://gamehackathon.azurewebsites.net/api/GetBattleEffects", content);
+            Debug.WriteLine("***********************\n" + " RECEIVING \n" + "***********************\n");
+            var responseString = await response.Content.ReadAsStringAsync();
+            Debug.WriteLine(responseString);
+            DBBatFXController bfx = new DBBatFXController();
+            bat = new List<BatEffects>();
+
+            parseJSONBat(responseString);
+            bfx.dropTable();
+            bfx.createTable();
+            foreach (BatEffects fx in bat)
+            {
+                bfx.SaveItem(fx);
+            }
+        }
+
+        public void parseJSONBat(string content)
+        {
+            JToken obj = JObject.Parse(content)["data"];
+            foreach (JToken property in obj)
+            {
+                bat.Add(new BatEffects
+                {
+                    Name = (string)property.SelectToken("Name"),
+                    Desc = (string)property.SelectToken("Description"),
+                    Tier = (int)property.SelectToken("Tier"),
+                    Target = (string)property.SelectToken("Target"),
+                    Attribute = (string)property.SelectToken("SPEED"),
+                });
             }
         }
     }
