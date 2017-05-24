@@ -98,7 +98,7 @@ namespace FandF
             }
             else if(myChar.items[6] != null)
             {
-               // magicTurn(myChar, myMons);
+                magicTurn(myChar, myMons);
             }
             else
             {
@@ -125,6 +125,46 @@ namespace FandF
             }
 
             logLine = myChar.Name + " healed for " + item.getHealth() + " points of damage thanks to " + item._name + " and " + itemStatus;
+        }
+
+        private void magicTurn(Character myChar, Monster myMons)
+        {
+            Item item = myChar.items[6];
+            String spellTarget = null;
+            if (item.getBodyPart() == "MAGICDIRECT")
+            {
+                myMons.CurrentHealth = myMons.CurrentHealth + item.getHealth();
+                myMons.Def = myMons.Def + item.getDef();
+                myMons.Dex = myMons.Dex + item.getDex();
+                myMons.Str = myMons.Str + item.getDex();
+                spellTarget = myMons.Name;
+            } else if(item.getBodyPart() == "MAGICALL")
+            {
+                spellTarget = "all monsters!";
+                foreach (Monster mons in this.monsters)
+                {
+                    mons.CurrentHealth = myMons.CurrentHealth + item.getHealth();
+                    mons.Def = myMons.Def + item.getDef();
+                    mons.Dex = myMons.Dex + item.getDex();
+                    mons.Str = myMons.Str + item.getDex();
+                }
+            }
+
+            
+            myChar.items[6].setUsage(myChar.items[6].getUsage() - 1);
+            if(myChar.items[6].getUsage() <= 0)
+            {
+                myChar.items[6] = null;
+               // itemStatus = "it broke!";
+            }
+
+            if (myMons.CurrentHealth <= 0)
+            {
+                myChar.gainExp(myMons.expValue);
+            }
+
+
+            logLine = myChar.Name + " dealed " + Math.Abs(item.getHealth()) + " points of damage by casting " + item._name + " on " + spellTarget;
         }
 
         private void weaponAttack(Character myChar, Monster myMons)
