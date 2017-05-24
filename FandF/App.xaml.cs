@@ -24,9 +24,12 @@ namespace FandF
             database.CreateTable<MonsterDBModel>();
             database.CreateTable<Score>();
             database.CreateTable<PartyScore>();
+            database.CreateTable<BatEffects>();
             database.Close();
             APIController api = new APIController();
             api.postJSON();
+            api.postJSONBattle();
+
             GoToMainPage();
         }
 
