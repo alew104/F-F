@@ -11,13 +11,14 @@
         </Grid.RowDefinitions>
         <ScrollView Grid.Row="1">
       <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+        <Image Source="team.jpg" />        
         <Label FontSize="22">
           <Label.FormattedText>
             <FormattedString>
               <FormattedString.Spans>
-                <Span Text="lewa1_hw2" FontAttributes="Bold" FontSize="22"/>
+                <Span Text="Team:" FontAttributes="Bold" FontSize="22"/>
                 <Span Text=" "/>
-                <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}"/>
+                <Span Text="Fungeons and Flagons" ForegroundColor="{StaticResource LightTextColor}"/>
               </FormattedString.Spans>
             </FormattedString>
           </Label.FormattedText>
@@ -26,7 +27,9 @@
           <Label.FormattedText>
             <FormattedString>
               <FormattedString.Spans>
-                <Span Text="Alex Lew" />
+                <Span Text="Students:" FontAttributes="Bold" FontSize="22"/>
+                <Span Text=" "/>
+                <Span Text="Alex Lew, Keegan Patterson, Jeff Thomas, Luke Gregor" ForegroundColor="{StaticResource LightTextColor}"/>
               </FormattedString.Spans>
             </FormattedString>
           </Label.FormattedText>
@@ -35,25 +38,7 @@
           <Label.FormattedText>
             <FormattedString>
               <FormattedString.Spans>
-                <Span Text="Date: 4.5.2017" />
-              </FormattedString.Spans>
-            </FormattedString>
-          </Label.FormattedText>
-        </Label>
-        <Label>
-          <Label.FormattedText>
-            <FormattedString>
-              <FormattedString.Spans>
-                <Span Text="Buttons are scrollable on gamescreen page" />
-              </FormattedString.Spans>
-            </FormattedString>
-          </Label.FormattedText>
-        </Label>
-        <Label>
-          <Label.FormattedText>
-            <FormattedString>
-              <FormattedString.Spans>
-                <Span Text="All 6 buttons are there" />
+                <Span Text="Date: 5.23.2017" />
               </FormattedString.Spans>
             </FormattedString>
           </Label.FormattedText>
