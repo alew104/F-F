@@ -17,7 +17,7 @@ namespace FandF
         {
             Title = c.Name;
             Ch = c;
-            for (int i = 0; i < c.items.Count; i++)
+            for (int i = 0; i < 7; i++)
             {
                 list.Add(c.items[i]);
             }

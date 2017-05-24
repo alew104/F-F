@@ -137,7 +137,9 @@ namespace FandF
 
         private void criticalMiss(Character myChar, Monster myMons)
         {
-            if (myChar.items.Count > 0)
+
+
+            if (myChar.hasItems())
             {
                 Item removedItem = myChar.removeRandomItem();
                 logLine = myChar.Name + " critically missed " + myMons.Name + " and dropped " + removedItem._name + "!";
@@ -260,6 +262,8 @@ namespace FandF
                 myItem.setDex(myItemModel.Dex);
                 myItem.setHealth(myItemModel.Health);
                 myItem.setStr(myItemModel.Str);
+                myItem.setUsage(myItemModel.Usage);
+                myItem.setBodyPart(myItemModel.BodyPart);
 
                 int charToAssign = rand.Next(0, 4);
                 while(isPartyAlive() && !characters[charToAssign].isAlive())

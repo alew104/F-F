@@ -5,8 +5,16 @@ namespace FandF
 {
     public class Character : ObservableObject
     {
-        
-        public List<Item> items { get; set; }
+        public Item[] items;
+        /*
+         0 = HEAD
+         1 = TORSO
+         2 = FEET
+         3 = DEFARM
+         4 = ATTKARM
+         5 = HEALING
+         6 = MAGICALL, MAGICDIRECT
+             */
 
 		private string _name;
 		public string Name
@@ -143,7 +151,7 @@ namespace FandF
         public Character(String name, String image)
         {
             this.Name = name;
-            items = new List<Item>();
+            items = new Item[7];
             this.Image = image;
             initRandomStats();
             this.CurrentHealth = this.MaxHealth;
@@ -153,7 +161,7 @@ namespace FandF
         public Character(String name, String image, int Str, int Def, int Dex, int Health)
         {
             this.Name = name;
-            items = new List<Item>();
+            items = new Item[7];
             this.Image = image;
             this.Str = Str;
             this.Def = Def;
@@ -264,16 +272,55 @@ namespace FandF
         //Adds a new item to the inventory of this character
         public void addItem(Item newThing)
         {
-            items.Add(newThing);
+            if (newThing.getBodyPart() == "HEAD")
+            {
+                items[0] = newThing;
+            }
+            else if (newThing.getBodyPart() == "TORSO")
+            {
+                items[1] = newThing;
+            }
+            else if (newThing.getBodyPart() == "FEET")
+            {
+                items[2] = newThing;
+            }
+            else if (newThing.getBodyPart() == "DEFARM")
+            {
+                items[3] = newThing;
+            }
+            else if (newThing.getBodyPart() == "ATTKARM")
+            {
+                items[4] = newThing;
+            }
+            else if (newThing.getBodyPart() == "HEALING")
+            {
+                items[5] = newThing;
+            }
+            else if (newThing.getBodyPart() == "MAGICDIRECT" || newThing.getBodyPart() == "MAGICALL")
+            {
+                items[6] = newThing;
+            }
+        }
+
+        public bool hasItems()
+        {
+            for(int i = 0; i < 7; i++)
+            {
+                if (items[i] != null)
+                    return true;
+            }
+            return false;
         }
 
         //Adds a new item to the inventory of this character
         public Item removeRandomItem()
         {
             Random rand = new Random();
-            int itemToRemove = rand.Next(0, items.Count);
+            int itemToRemove = rand.Next(0, 7);
+            while(items[itemToRemove] == null && hasItems())
+                itemToRemove = rand.Next(0, 7);
             Item itemToReturn = items[itemToRemove];
-            items.RemoveAt(itemToRemove);
+            items[itemToRemove] = null;
 
             return itemToReturn;
         }
@@ -285,7 +332,8 @@ namespace FandF
             int totalStr = 0;
             foreach (Item item in items)
             {
-                totalStr += item.getStr();
+                if(item != null)
+                    totalStr += item.getStr();
             }
             return totalStr;
         }
@@ -295,7 +343,8 @@ namespace FandF
             int totalDef = 0;
             foreach (Item item in items)
             {
-                totalDef += item.getDex();
+                if (item != null)
+                    totalDef += item.getDex();
             }
             return totalDef;
         }
@@ -305,7 +354,8 @@ namespace FandF
             int totalDex = 0;
             foreach (Item item in items)
             {
-                totalDex += item.getDex();
+                if (item != null)
+                    totalDex += item.getDex();
             }
             return totalDex;
         }
@@ -315,7 +365,8 @@ namespace FandF
             int totalHealth = 0;
             foreach (Item item in items)
             {
-                totalHealth += item.getHealth();
+                if (item != null)
+                    totalHealth += item.getHealth();
             }
             return totalHealth;
         }
