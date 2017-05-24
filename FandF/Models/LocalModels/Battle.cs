@@ -273,7 +273,15 @@ namespace FandF
 
                 //Usage stuff
                 String itemStatus = "!";
-                int itemIndex = rand.Next(0, 4);
+                int itemIndex;
+                if (myChar.items[0] != null)
+                    itemIndex = 0;
+                else if (myChar.items[1] != null)
+                    itemIndex = 1;
+                else if (myChar.items[2] != null)
+                    itemIndex = 2;
+                else
+                    itemIndex = 3;
 
                 if (myChar.items[itemIndex] != null)
                 {
