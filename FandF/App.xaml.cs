@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using FandF.Helpers;
 using FandF.Views;
 using FandF.Models.DBModels;
+using FandF.Services;
 
 namespace FandF
 {
@@ -24,6 +25,8 @@ namespace FandF
             database.CreateTable<Score>();
             database.CreateTable<PartyScore>();
             database.Close();
+            APIController api = new APIController();
+            api.postJSON();
             GoToMainPage();
         }
 
