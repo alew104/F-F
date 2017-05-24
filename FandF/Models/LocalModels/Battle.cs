@@ -67,6 +67,10 @@ namespace FandF
                     overallTurn++;
                     charAttack(currentCharacter, getMonsterWithLeastHealth());
                 }
+                else
+                {
+                    logLine = currentCharacter.Name + " is super dead.";
+                }
             }
             else //Fighter is a monster
             {
@@ -85,6 +89,10 @@ namespace FandF
                     }
 
                     monsAttack(currentMonster, charToAttack);
+                }
+                else
+                {
+                    logLine = currentMonster.Name + " is super dead.";
                 }
             }
             roundTurn = (roundTurn + 1) % (characters.Count + monsters.Count);
