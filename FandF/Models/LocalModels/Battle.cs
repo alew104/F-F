@@ -92,6 +92,43 @@ namespace FandF
 
         public void charAttack(Character myChar, Monster myMons)
         {
+            if(myChar.items[5] != null && myChar.CurrentHealth < myChar.MaxHealth)
+            {
+                healingTurn(myChar);
+            }
+            else if(myChar.items[6] != null)
+            {
+               // magicTurn(myChar, myMons);
+            }
+            else
+            {
+                weaponAttack(myChar, myMons);
+            }
+
+        }
+
+        private void healingTurn(Character myChar)
+        {
+            //Heal player
+            Item item = myChar.items[5];
+            myChar.CurrentHealth = myChar.CurrentHealth + item.getHealth();
+            if (myChar.CurrentHealth > myChar.MaxHealth)
+                myChar.CurrentHealth = myChar.MaxHealth;
+
+            //Use/remove item
+            String itemStatus = "it can be used again!";
+            myChar.items[5].setUsage(myChar.items[5].getUsage() - 1);
+            if (myChar.items[5].getUsage() <= 0)
+            {
+                myChar.items[5] = null;
+                itemStatus = "it broke!";
+            }
+
+            logLine = myChar.Name + " healed for " + item.getHealth() + " points of damage thanks to " + item._name + " and " + itemStatus;
+        }
+
+        private void weaponAttack(Character myChar, Monster myMons)
+        {
             int damageCalc = 0;
             Random rand = new Random();
             int diceRoll = rand.Next(1, 21);
@@ -119,20 +156,21 @@ namespace FandF
                     myChar.gainExp(myMons.expValue);
                 }
 
-                if(diceRoll == 20)
+                if (diceRoll == 20)
                     logLine = myChar.Name + " critically hit " + myMons.Name + " for " + damageCalc + " damage!!!";
                 else
                     logLine = myChar.Name + " hit " + myMons.Name + " for " + damageCalc + " damage!";
 
 
-            } else if (diceRoll == 1) { //Critical miss
+            }
+            else if (diceRoll == 1)
+            { //Critical miss
                 criticalMiss(myChar, myMons);
             }
             else
             {
                 logLine = myChar.Name + "  missed " + myMons.Name;
             }
-
         }
 
         private void criticalMiss(Character myChar, Monster myMons)
@@ -246,7 +284,7 @@ namespace FandF
 
         public List<Character> endOfBattle()
         {
-            int ITEMS_TO_GENERATE = 2;
+            int ITEMS_TO_GENERATE = 4;
 
             DBItemController itemAccess = new DBItemController();
             List<ItemDBModel> allItems = itemAccess.getAllItems();
