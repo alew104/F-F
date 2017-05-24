@@ -11,6 +11,9 @@ namespace FandF
         private int _def;
         private int _dex;
         private int _health;
+        private string _uri;
+        private int _usage;
+        private string _bodypart;
 
         public Item()
         {
@@ -26,6 +29,48 @@ namespace FandF
         {
             _name = name;
             _desc = desc;
+        }
+
+        public Item (string name, int str, int def, int dex, int health, string uri, int usage, string bodypart)
+        {
+            _name = name;
+            _str = str;
+            _def = def;
+            _dex = dex;
+            _health = health;
+            _uri = uri;
+            _usage = usage;
+            _bodypart = bodypart;
+        }
+
+        public string getBodyPart()
+        {
+            return _bodypart;
+        }
+
+        public int getUsage()
+        {
+            return _usage;
+        }
+
+        public void setUsage(int i)
+        {
+            _usage = i;
+        }
+
+        public void setBodyPart(string s)
+        {
+            _bodypart = s;
+        }
+
+        public string getURI()
+        {
+            return _uri;
+        }
+
+        public void setURI(string s)
+        {
+            _uri = s;
         }
 
         public int getStr()
