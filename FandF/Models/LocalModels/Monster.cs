@@ -150,16 +150,16 @@ namespace FandF
         }
 
         /**** GETTERS ****/
-        /**
+        
 
         public String getName()
         {
-            return this.name;
+            return this.Name;
         }
 
         public int getLevel()
         {
-            return this.level;
+            return this.Level;
         }
 
         public int getExpValue()
@@ -169,7 +169,7 @@ namespace FandF
 
         public String getImage()
         {
-            return this.image;
+            return this.Image;
         }
 
         public int getStr()
@@ -198,16 +198,16 @@ namespace FandF
         }
 
         /**** SETTERS ****/
-        /**
+        
 
         public void setName(String name)
         {
-            this.name = name;
+            this.Name = name;
         }
 
         public void setLevel(int level)
         {
-            this.level = level;
+            this.Level = level;
         }
 
         public void setExpValue(int expValue)
@@ -217,7 +217,7 @@ namespace FandF
 
         public void setImage(String image)
         {
-            this.image = image;
+            this.Image = image;
         }
 
         public void setStr(int Str)

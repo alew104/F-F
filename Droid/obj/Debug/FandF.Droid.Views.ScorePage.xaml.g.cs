@@ -8,15 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FandF.Views {
+namespace FandF {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Atlas\\Source\\Repos\\Fungeons and Flagons\\FandF\\Views\\ScorePage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Alex Lew\\Source\\Repos\\Fungeons and Flagons\\FandF\\Views\\ScorePage.xaml")]
     public partial class ScorePage : global::Xamarin.Forms.ContentPage {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.ListView ScoresListView;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ScorePage));
+            ScoresListView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "ScoresListView");
         }
     }
 }

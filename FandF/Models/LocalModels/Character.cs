@@ -173,7 +173,7 @@ namespace FandF
         }
 
         /**** GETTERS ****/
-        /**
+        
         public String getName()
         {
             return this.Name;
@@ -220,7 +220,7 @@ namespace FandF
         }
 
         /**** SETTERS ****/
-        /**
+        
         public void setName(String name)
         {
             this.Name = name;
