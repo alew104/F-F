@@ -31,10 +31,22 @@ namespace FandF.Views
             if (button.Text == "Battle")
             {
                 DBCharacterController db = new DBCharacterController();
-                CharacterDBModel c1 = db.getCharacter(1);
-                CharacterDBModel c2 = db.getCharacter(2);
-                CharacterDBModel c3 = db.getCharacter(3);
-                CharacterDBModel c4 = db.getCharacter(4);
+                List<CharacterDBModel> dbChars = db.getAllCharacters();
+                Random rand = new Random();
+
+
+                int charIndex = rand.Next(0, dbChars.Count);
+                CharacterDBModel c1 = dbChars[charIndex];
+                dbChars.RemoveAt(charIndex);
+                charIndex = rand.Next(0, dbChars.Count);
+                CharacterDBModel c2 = dbChars[charIndex];
+                dbChars.RemoveAt(charIndex); 
+                charIndex = rand.Next(0, dbChars.Count);
+                CharacterDBModel c3 = dbChars[charIndex];
+                dbChars.RemoveAt(charIndex); 
+                charIndex = rand.Next(0, dbChars.Count);
+                CharacterDBModel c4 = dbChars[charIndex];
+                dbChars.RemoveAt(charIndex);
 
                 Character ch1 = new Character(c1.Name, c1.Image, c1.Str, c1.Def, c1.Dex, c1.Health);
                 Character ch2 = new Character(c2.Name, c2.Image, c2.Str, c2.Def, c2.Dex, c2.Health);
