@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using FandF.Models.DBModels;
+using FandF.Services;
 
 namespace FandF.Views
 {
@@ -70,7 +72,7 @@ namespace FandF.Views
                 vm.setOutput(battle.logLine);
             }
             //FIXME: this goes to the end game stats, but i dont think the list im calling is the right one. how would i get the updated characterss?
-            GoToScore(vm.getCharacters());
+            GoToScoreAndPushToDB(vm.getCharacters());
 
         }
 
@@ -85,9 +87,7 @@ namespace FandF.Views
                     vm.generateNewMonsters();
                     battle = new Battle(c, vm.getMonsters());
                     battles++;
-                    //newBattle(c);
-                    //FIXME: need to make a new instance of a battle
-                    //with new monsters, but the same characters...
+                    
 
                 }
                 battle.takeTurn();
@@ -98,7 +98,7 @@ namespace FandF.Views
             }
             else{
                 //FIXME: don't think the list i'm using is the right one in this call.
-                GoToScore(vm.getCharacters());
+                GoToScoreAndPushToDB(vm.getCharacters());
             }
         }
 
@@ -121,8 +121,41 @@ namespace FandF.Views
             await Navigation.PushAsync(new BattlePage(new BattleViewModel(c[0], c[1], c[2], c[3])));
         }
 
-		async void GoToScore(List<Character> c)
+        //Takes care of the logic for pushing the scores to the DB
+        //Then goes to the end-of-game score page
+		async void GoToScoreAndPushToDB(List<Character> c)
 		{
+            //Initialize DBs
+            DBPartyController partyDB = new DBPartyController();
+            DBScoreController scoreDB = new DBScoreController();
+
+            //Push general party score (battles won + overall levels)
+            int scoretotal = battles;
+            foreach (Character myC in c)
+                scoretotal += myC.Level;
+            Score scoreToPush = new Score{Points = scoretotal};
+            int scoreID = scoreDB.SaveItem(scoreToPush);
+
+            //Associate specific character scores with the party score and push to partyDB
+            foreach(Character myC in c)
+            {
+                PartyScore charScore = new PartyScore
+                {
+                    PartyId = scoreID,
+                    Name = myC.Name,
+                    Image = myC.Image,
+                    Str = myC.Str,
+                    Def = myC.Def,
+                    Dex = myC.Dex,
+                    Health = myC.MaxHealth,
+                    Battles = battles,
+                    Levels = myC.Level,
+                    ExpPoints = myC.ExpPoints
+                };
+                partyDB.SaveItem(charScore);
+            }
+
+            //Exit to end-of-game page
             await Navigation.PushAsync(new EndGamePage(c, battles));
 		}
 

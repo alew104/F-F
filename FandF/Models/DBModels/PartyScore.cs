@@ -122,8 +122,47 @@ namespace FandF.Models.DBModels
             }
         }
 
+        public int _battles;
+        public int Battles
+        {
+            get
+            {
+                return _battles;
+            }
+            set
+            {
+                this._battles = value;
+                OnPropertyChanged(nameof(Battles));
+            }
+        }
 
+        public int _level;
+        public int Levels
+        {
+            get
+            {
+                return _level;
+            }
+            set
+            {
+                this._level = value;
+                OnPropertyChanged(nameof(Levels));
+            }
+        }
 
+        public int _expPoints;
+        public int ExpPoints
+        {
+            get
+            {
+                return _expPoints;
+            }
+            set
+            {
+                this._expPoints = value;
+                OnPropertyChanged(nameof(ExpPoints));
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propertyName)

@@ -90,7 +90,7 @@ namespace FandF.Services
 
         public List<Score> getAllItems()
         {
-            return database.Query<Score>("SELECT * FROM Score");
+            return database.Query<Score>("SELECT * FROM Score ORDER BY points DESC");
         }
 
         public void closeDatabase()

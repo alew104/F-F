@@ -93,6 +93,11 @@ namespace FandF.Services
             return database.Query<PartyScore>("SELECT * FROM PartyScore");
         }
 
+        public List<PartyScore> getAllItems(int id)
+        {
+            return database.Query<PartyScore>("SELECT * FROM PartyScore where partyid = ?", id);
+        }
+
         public int getMaxPartyId()
         {
             lock (collisionLock)
